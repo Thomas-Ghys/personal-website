@@ -18,7 +18,60 @@
               }
             ]
           }
-        ]
+        ],
+		// "camelcase": "error", // enforce camelcase naming convention
+		"default-case": "error", // require `default` cases in `switch` statements
+		"new-cap": ["error", {"capIsNew": false}], // require constructor names to begin with a capital letter
+		"no-else-return": "error", // disallow `else` blocks after `return` statements in `if` statements
+		"no-array-constructor": "error", // disallow `Array` constructors
+		"no-empty-function": ["error", {"allow": ["constructors"]}], // disallow empty functions
+		"no-eval": "error", // disallow the use of `eval()`
+		"no-implied-eval": "error", // disallow the use of `eval()`-like methods
+		"no-lone-blocks": "error", // disallow unnecessary nested blocks
+		"no-lonely-if": "error", // disallow `if` statements as the only statement in `else` blocks
+		"no-script-url": "error", // disallow `javascript:` urls
+		"no-undef-init": "error", // disallow initializing variables to `undefined`
+		"no-useless-rename": "error", // disallow renaming import, export, and destructured assignments to the same name
+		"prefer-arrow-callback": "error", // require using arrow functions for callbacks
+		"prefer-const": "error", // require `const` declarations for variables that are never reassigned after declared
+		"prefer-object-has-own": "error", // disallow use of `Object.prototype.hasOwnProperty.call()` and prefer use of `Object.hasOwn()`
+		"quote-props": ["error", "as-needed"], // require quotes around object literal property names
+		"spaced-comment": "error", // enforce consistent spacing after the `//` or `/*` in a comment
+		"array-bracket-spacing": "error", // enforce consistent spacing inside array brackets
+		"arrow-parens": "error", // require parentheses around arrow function arguments
+		"arrow-spacing": "error", // enforce consistent spacing before and after the arrow in arrow functions
+		"block-spacing": "error", // disallow or enforce spaces inside of blocks after opening block and before closing block
+		"brace-style": "error", // enforce consistent brace style for blocks
+		"comma-dangle": "error", // require or disallow trailing commas
+		"comma-spacing": "error", // enforce consistent spacing before and after commas
+		"func-call-spacing": "error", // require or disallow spacing between function identifiers and their invocations
+		"implicit-arrow-linebreak": "error", // enforce the location of arrow function bodies
+		"indent": ["error", "tab", { "SwitchCase": 1 }], // enforce consistent indentation
+		"key-spacing": "error", // enforce consistent spacing between keys and values in object literal properties
+		"keyword-spacing": "error", // enforce consistent spacing before and after keywords
+		"lines-between-class-members": ["error", "always", { "exceptAfterSingleLine": true }], // require or disallow an empty line between class members
+		"new-parens": "error", // enforce or disallow parentheses when invoking a constructor with no arguments
+		"no-extra-parens": ["error", "functions"], // disallow unnecessary parentheses
+		"no-multi-spaces": "error", // disallow multiple spaces
+		"no-trailing-spaces": "error", // disallow trailing whitespace at the end of lines
+		"no-whitespace-before-property": "error", // disallow whitespace before properties
+		"object-curly-spacing": "error", // enforce consistent spacing inside braces
+		"operator-linebreak": "error", // enforce consistent linebreak style for operators
+		"padded-blocks": ["error", "never"], //require or disallow padding within blocks
+		"padding-line-between-statements": "error",  // require or disallow padding lines between statements
+		"quotes": ["error", "single"], // enforce the consistent use of either backticks, double, or single quotes
+		"rest-spread-spacing": "error", // enforce spacing between rest and spread operators and their expressions
+		"semi": "error", // require or disallow semicolons instead of ASI
+		"semi-spacing": "error", // enforce consistent spacing before and after semicolons
+		"semi-style": "error", // enforce location of semicolons
+		"space-before-blocks": "error", // enforce consistent spacing before blocks
+		"space-before-function-paren": ["error", "never"], // enforce consistent spacing before `function` definition opening parenthesis
+		"space-in-parens": "error", // enforce consistent spacing inside parentheses
+		"space-infix-ops": "error", // require spacing around infix operators
+		"space-unary-ops": "error", // enforce consistent spacing before or after unary operators
+		"switch-colon-spacing": "error", // enforce spacing around colons of switch statements
+		"template-curly-spacing": "error", // require or disallow spacing around embedded expressions of template strings
+		"wrap-regex": "error" // require parenthesis around regex literals,
       }
     },
     {
@@ -34,7 +87,6 @@
     {
       "files": ["*.spec.ts", "*.spec.tsx", "*.spec.js", "*.spec.jsx"],
       "env": {
-        "jest": true
       },
       "rules": {}
     }
