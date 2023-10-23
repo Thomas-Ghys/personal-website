@@ -7,7 +7,7 @@ import { NxWelcomeComponent } from './nx-welcome.component';
   imports: [NxWelcomeComponent, RouterModule],
   selector: 'personal-website-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
   title = 'main-website';

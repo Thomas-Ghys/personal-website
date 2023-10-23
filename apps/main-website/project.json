@@ -19,7 +19,7 @@
           "apps/main-website/src/favicon.ico",
           "apps/main-website/src/assets"
         ],
-        "styles": ["apps/main-website/src/styles.css"],
+        "styles": ["apps/main-website/src/styles.scss"],
         "scripts": []
       },
       "configurations": {
