@@ -5,6 +5,9 @@
 	"prefix": "personal-website",
 	"sourceRoot": "apps/main-website/src",
 	"tags": [],
+	"i18n": {
+		
+	},
 	"targets": {
 		"build": {
 			"executor": "@angular-devkit/build-angular:browser",
