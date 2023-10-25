@@ -1,0 +1,5 @@
+@import './tokens/color-tokens.scss';
+@import './tokens/typography-tokens.scss';
+
+@include typography-tokens();
+@include color-tokens();

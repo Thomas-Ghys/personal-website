@@ -22,7 +22,10 @@
 					"apps/main-website/src/favicon.ico",
 					"apps/main-website/src/assets"
 				],
-				"styles": ["apps/main-website/src/styles.scss"],
+				"styles": [
+					"apps/main-website/src/styles.scss",
+					"libraries/styling/src/theme/theme.scss"
+				],
 				"scripts": []
 			},
 			"configurations": {

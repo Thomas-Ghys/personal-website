@@ -15,7 +15,8 @@
 		"skipDefaultLibCheck": true,
 		"baseUrl": ".",
 		"paths": {
-			"@personal-website/UI": ["libraries/UI/src/index.ts"]
+			"@personal-website/UI": ["libraries/UI/src/index.ts"],
+			"@personal-website/styling": ["libraries/styling/src/index.ts"]
 		}
 	},
 	"exclude": ["node_modules", "tmp"]
