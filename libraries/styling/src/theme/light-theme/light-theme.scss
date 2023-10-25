@@ -1,0 +1,9 @@
+@import './light-theme-tokens.scss';
+@import './light-theme-rgb-tokens.scss';
+
+@mixin light-theme() {
+	:root:not([data-theme="dark"]) {
+		@include light-theme-tokens();
+		@include light-theme-rgb-tokens();
+	}
+}

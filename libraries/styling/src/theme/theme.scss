@@ -1,5 +1,18 @@
+@use '@angular/material' as mat;
+
 @import './tokens/color-tokens.scss';
 @import './tokens/typography-tokens.scss';
 
+@import './light-theme/light-theme.scss';
+
 @include typography-tokens();
 @include color-tokens();
+
+@include mat.core();
+
+
+@include light-theme();
+
+[data-theme="dark"] {
+
+}
