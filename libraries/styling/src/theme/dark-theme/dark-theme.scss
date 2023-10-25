@@ -1,0 +1,9 @@
+@import './dark-theme-tokens.scss';
+@import './dark-theme-rgb-tokens.scss';
+
+@mixin dark-theme() {
+	:root[data-theme="dark"] {
+		@include dark-theme-tokens();
+		@include dark-theme-rgb-tokens();
+	}
+}
