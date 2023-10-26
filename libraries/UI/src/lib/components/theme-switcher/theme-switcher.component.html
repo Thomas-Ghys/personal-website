@@ -1,0 +1,18 @@
+<div class="theme-switcher-wrapper">
+	<button mat-icon-button 
+			class="theme-switcher-button"
+			(click)="setDataTheme('light')"
+			*ngIf="this.userTheme === 'dark'">
+		<span class="material-symbols-outlined">
+			light_mode
+		</span>
+	</button>
+	<button mat-icon-button 
+			class="theme-switcher-button"
+			(click)="setDataTheme('dark')"
+			*ngIf="this.userTheme === 'light'">
+		<span class="material-symbols-outlined">
+			dark_mode
+		</span>
+	</button>
+</div>
