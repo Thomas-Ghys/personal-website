@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { MenuBarComponent } from '@personal-website/UI';
 
 @Component({
 	standalone: true,
 	imports: [
-		RouterModule
+		RouterModule,
+		MenuBarComponent
 	],
 	selector: 'personal-website-root',
 	templateUrl: './app.component.html',

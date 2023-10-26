@@ -4,7 +4,9 @@ import { CommonModule } from '@angular/common';
 @Component({
 	selector: 'lib-ui-menu-bar',
 	standalone: true,
-	imports: [CommonModule],
+	imports: [
+		CommonModule
+	],
 	templateUrl: './menu-bar.component.html',
 	styleUrls: ['./menu-bar.component.scss'],
 	changeDetection: ChangeDetectionStrategy.OnPush,
