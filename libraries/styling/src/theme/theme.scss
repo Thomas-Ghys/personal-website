@@ -5,6 +5,7 @@
 
 @import './light-theme/light-theme.scss';
 @import './dark-theme/dark-theme.scss';
+@import './typography/typography.scss';
 
 @include typography-tokens();
 @include color-tokens();
@@ -14,3 +15,4 @@
 
 @include light-theme();
 @include dark-theme();
+@include typography();
