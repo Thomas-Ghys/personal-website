@@ -6,7 +6,7 @@ import { MenuBarComponent } from '@personal-website/UI';
 	standalone: true,
 	imports: [
 		RouterModule,
-		MenuBarComponent
+		MenuBarComponent,
 	],
 	selector: 'personal-website-root',
 	templateUrl: './app.component.html',

@@ -1,0 +1,18 @@
+<div class="menu-toggle-wrapper">
+	<button mat-icon-button 
+			class="menu-toggle-button"
+			(click)="toggleMenu()"
+			*ngIf="(menuState$ | async) === false">
+		<span class="material-symbols-outlined">
+			menu
+		</span>
+	</button>
+	<button mat-icon-button 
+			class="menu-toggle-button"
+			(click)="toggleMenu()"
+			*ngIf="menuState$ | async">
+		<span class="material-symbols-outlined">
+			menu_open
+		</span>
+	</button>
+</div>
