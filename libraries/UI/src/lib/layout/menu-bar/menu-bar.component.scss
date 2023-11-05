@@ -8,6 +8,13 @@
 	display: grid;
 	grid-template-columns: min-content auto min-content;
 
+	.menu-bar-toolbar-navigation {
+		width: fit-content;
+		display: grid;
+		align-items: center;
+		justify-content: start;
+	}
+
 	.menu-bar-toolbar-right-icons {
 		width: fit-content;
 		display: grid;

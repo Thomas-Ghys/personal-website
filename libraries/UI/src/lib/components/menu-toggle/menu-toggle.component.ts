@@ -5,11 +5,15 @@ import { Observable } from 'rxjs';
 import { Store, select } from '@ngrx/store';
 import { getUIMenuState } from 'stores/application-state';
 import { SetMenuState } from 'stores/ui';
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
 	selector: 'lib-ui-menu-toggle',
 	standalone: true,
-	imports: [CommonModule],
+	imports: [
+		CommonModule,
+		MatButtonModule
+	],
 	templateUrl: './menu-toggle.component.html',
 	styleUrls: ['./menu-toggle.component.scss'],
 	changeDetection: ChangeDetectionStrategy.OnPush,
