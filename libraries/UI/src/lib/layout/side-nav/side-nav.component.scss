@@ -1,0 +1,19 @@
+.side-nav-container {
+	display: flex;
+	flex-direction: column;
+	
+	position: fixed;
+	z-index: 1000;
+	width: var(--side-nav-width);
+	top: var(--header-height);
+	bottom: 0;
+	left: 0;
+	border-top-right-radius: 24px;
+	border-bottom-right-radius: 24px;
+
+	background: var(--md-sys-color-surface-container-high);
+	color: var(--md-sys-color-on-surface-variant);
+	box-shadow: 2px 0px 11px 0px rgba(var(--md-sys-color-surface-shadow),0.75);
+
+	padding: 28px;
+}

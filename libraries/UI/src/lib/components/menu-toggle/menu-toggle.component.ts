@@ -6,13 +6,17 @@ import { Store, select } from '@ngrx/store';
 import { getUIMenuState } from 'stores/application-state';
 import { SetMenuState } from 'stores/ui';
 import { MatButtonModule } from '@angular/material/button';
+import { OverlayModule } from '@angular/cdk/overlay';
+import { SideNavComponent } from '../../layout/side-nav/side-nav.component';
 
 @Component({
 	selector: 'lib-ui-menu-toggle',
 	standalone: true,
 	imports: [
 		CommonModule,
-		MatButtonModule
+		MatButtonModule,
+		OverlayModule,
+		SideNavComponent
 	],
 	templateUrl: './menu-toggle.component.html',
 	styleUrls: ['./menu-toggle.component.scss'],
@@ -20,10 +24,12 @@ import { MatButtonModule } from '@angular/material/button';
 })
 export class MenuToggleComponent {
 	protected menuState$: Observable<boolean> = this.store.pipe(select(getUIMenuState));
+	protected menuState = false;
 	
 	constructor(private store: Store<ApplicationState>) {}
 
 	toggleMenu() {
+		this.menuState = !this.menuState;
 		this.store.dispatch(SetMenuState());
 	}
 }
