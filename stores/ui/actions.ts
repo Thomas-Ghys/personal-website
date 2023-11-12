@@ -1,9 +1,9 @@
-import { createAction, props } from "@ngrx/store";
+import { createAction } from "@ngrx/store";
 
-export const GetMenuState = createAction(
+export const GetMenuStateAction = createAction(
 	'[UI] get menu state',
 )
 
-export const SetMenuState = createAction(
+export const SetMenuStateAction = createAction(
 	'[UI] get menu state',
 )

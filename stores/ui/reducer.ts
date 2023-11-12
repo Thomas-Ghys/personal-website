@@ -4,7 +4,7 @@ import * as ui from './actions';
 
 export const uiStateReducer = createReducer(
 	INITIAL_UI_STATE,
-	on(ui.SetMenuState, uiState => ({...uiState, menuState: !uiState.menuState}))
+	on(ui.SetMenuStateAction, uiState => ({...uiState, menuState: !uiState.menuState}))
 )
 
 export function reducer(uiState: UIState = INITIAL_UI_STATE, action: Action): UIState {

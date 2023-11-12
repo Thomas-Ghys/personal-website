@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { Observable } from 'rxjs';
 import { Store, select } from '@ngrx/store';
 import { getUIMenuState } from 'stores/application-state';
-import { SetMenuState } from 'stores/ui';
+import { SetMenuStateAction } from 'stores/ui';
 import { MatButtonModule } from '@angular/material/button';
 import { OverlayModule } from '@angular/cdk/overlay';
 import { SideNavComponent } from '../../layout/side-nav/side-nav.component';
@@ -30,6 +30,6 @@ export class MenuToggleComponent {
 
 	toggleMenu() {
 		this.menuState = !this.menuState;
-		this.store.dispatch(SetMenuState());
+		this.store.dispatch(SetMenuStateAction());
 	}
 }

@@ -1,4 +1,3 @@
-import { reducers } from './../../../../stores/application-state';
 import { ApplicationConfig } from '@angular/core';
 import {
 	provideRouter,
@@ -11,7 +10,7 @@ import * as fromApplicationState from './../../../../stores/application-state';
 
 export const appConfig: ApplicationConfig = {
 	providers: [
-		provideEffects(),
+		provideEffects(fromApplicationState.effects),
 		provideStore(fromApplicationState.reducers),
 		provideRouter(appRoutes, withEnabledBlockingInitialNavigation()),
 	],

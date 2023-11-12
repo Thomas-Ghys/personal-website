@@ -18,12 +18,12 @@ export class SideNavComponent {
 		{
 			sideNavIcon: 'home',
 			sideNavText: 'ui.side-nav.home',
-			sideNavUrl: '/home'
+			sideNavUrl: 'home'
 		},
 		{
 			sideNavIcon: 'call',
 			sideNavText: 'ui.side-nav.contact',
-			sideNavUrl: '/contact'
+			sideNavUrl: 'contact'
 		},
 	]
 }

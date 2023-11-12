@@ -2,9 +2,10 @@ import { SharingModule } from './../../../../../../apps/main-website/src/app/sha
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatIconModule } from '@angular/material/icon';
-import { ApplicationState } from 'stores/application-state';
-import { Observable } from 'rxjs';
+import { ApplicationState, getCurrentRoute } from 'stores/application-state';
 import { Store, select } from '@ngrx/store';
+import { Observable } from 'rxjs';
+import { NavigateToRouteAction } from 'stores/core';
 
 @Component({
   selector: 'lib-ui-side-nav-item',
@@ -21,9 +22,13 @@ import { Store, select } from '@ngrx/store';
 export class SideNavItemComponent {
 	@Input() sideNavIcon = 'device_unknown';
 	@Input() sideNavText = 'test';
-	@Input() sideNavUrl = '/home';
+	@Input() sideNavUrl = 'home';
 
-	// protected sideNavItemActive: Observable<string> = this.store.pipe(select());
+	protected sideNavItemActive: Observable<string> = this.store.pipe(select(getCurrentRoute));
 
 	constructor(private store: Store<ApplicationState>) { }
+
+	navigateToRoute(route: string) {
+		this.store.dispatch(NavigateToRouteAction({routeToNavigateTo: route}));
+	}
 }
