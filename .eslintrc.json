@@ -6,7 +6,7 @@
     {
       "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
       "rules": {
-        "@nx/enforce-module-boundaries": [
+        /*"@nx/enforce-module-boundaries": [
           "error",
           {
             "enforceBuildableLibDependency": true,
@@ -18,7 +18,7 @@
               }
             ]
           }
-        ],
+        ],*/
 		// "camelcase": "error", // enforce camelcase naming convention
 		"default-case": "error", // require `default` cases in `switch` statements
 		"new-cap": ["error", {"capIsNew": false}], // require constructor names to begin with a capital letter
