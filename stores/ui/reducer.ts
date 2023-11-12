@@ -4,7 +4,11 @@ import * as ui from './actions';
 
 export const uiStateReducer = createReducer(
 	INITIAL_UI_STATE,
-	on(ui.SetMenuStateAction, uiState => ({...uiState, menuState: !uiState.menuState}))
+	on(ui.SetMenuStateAction, uiState => ({...uiState, menuState: !uiState.menuState})),
+	on(ui.SetLanguageSelectorStateAction, uiState => ({
+		...uiState,
+		languageSelectorState: !uiState.languageSelectorState
+	}))
 )
 
 export function reducer(uiState: UIState = INITIAL_UI_STATE, action: Action): UIState {
@@ -12,3 +16,5 @@ export function reducer(uiState: UIState = INITIAL_UI_STATE, action: Action): UI
 }
 
 export const getMenuState = (uiState: UIState): boolean => uiState.menuState;
+export const getLanguageSelectorState = (uiState: UIState): boolean => uiState.languageSelectorState;
+export const getCurrentSelectedLanguage = (uiState: UIState): string => uiState.currentLanguage;

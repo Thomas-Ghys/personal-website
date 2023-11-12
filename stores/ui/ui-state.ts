@@ -1,7 +1,11 @@
 export interface UIState {
-	menuState: boolean
+	menuState: boolean,
+	languageSelectorState: boolean,
+	currentLanguage: string
 }
 
 export const INITIAL_UI_STATE: UIState = {
-	menuState: false
+	menuState: false,
+	languageSelectorState: false,
+	currentLanguage: ''
 }

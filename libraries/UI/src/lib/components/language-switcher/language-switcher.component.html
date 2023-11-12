@@ -1,0 +1,29 @@
+<div class="language-switcher-wrapper">
+	<button mat-icon-button  
+			cdkOverlayOrigin 
+			#cdkOverlayButton="cdkOverlayOrigin"
+			class="language-switcher-button" 
+			(click)="toggleLanguageSwitcher()">
+		<span class="material-symbols-outlined">
+			translate
+		</span>
+	</button>
+</div>
+
+<ng-template cdkConnectedOverlay
+			[cdkConnectedOverlayOrigin]="cdkOverlayButton" 
+			[cdkConnectedOverlayOpen]="languageSwitcherState">
+		<div class="language-switcher-overlay-container" 
+			*ngFor="let language of supportedLanguages">
+			<div class="language-switcher-overlay-wrapper" 
+				[ngClass]="{'language-switcher-language-active': (selectedLanguage$ | async) === language.languageSelector}" 
+				(click)="changeLanguage(language.languageSelector)">
+				<span class="material-symbols-outlined" *ngIf="(selectedLanguage$ | async) === language.languageSelector">
+					check
+				</span>
+				<div>
+					<span>{{language.languageText | translate}}</span>
+				</div>
+			</div>
+		</div>
+</ng-template>

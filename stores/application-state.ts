@@ -22,7 +22,8 @@ export const reducers = {
 }
 
 export const effects = [
-	fromCore.CoreEffectsService
+	fromCore.CoreEffectsService,
+	fromUI.UIEffectsService
 ]
 
 /*----- START: Core Selectors -----*/
@@ -34,4 +35,6 @@ export const getPreviousRoute = createSelector(getCoreState, fromCore.getPreviou
 /*----- START: UI Selectors -----*/
 export const getUIState = createFeatureSelector<UIState>('ui');
 export const getUIMenuState = createSelector(getUIState, fromUI.getMenuState);
+export const getLanguageSelectorState = createSelector(getUIState, fromUI.getLanguageSelectorState);
+export const getSelectedLanguage = createSelector(getUIState, fromUI.getCurrentSelectedLanguage);
 /*----- END: UI Selectors -----*/

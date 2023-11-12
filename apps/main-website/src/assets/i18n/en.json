@@ -3,6 +3,10 @@
 		"side-nav": {
 			"home": "Home",
 			"contact": "Contact"
+		},
+		"language-switcher": {
+			"nl": "Dutch",
+			"en": "English"
 		}
 	}
 }
