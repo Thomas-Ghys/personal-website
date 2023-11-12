@@ -1,3 +1,9 @@
 <div class="side-nav-container">
-	<span>test</span>
+	<div class="side-nav-wrapper" 
+		*ngFor="let sideNavItem of sideNavItemConfiguration">
+		<lib-ui-side-nav-item
+			[sideNavIcon]="sideNavItem.sideNavIcon"
+			[sideNavText]="sideNavItem.sideNavText"
+		></lib-ui-side-nav-item>
+	</div>
 </div>

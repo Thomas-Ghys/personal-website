@@ -1,0 +1,51 @@
+{
+	"name": "contact",
+	"$schema": "../../node_modules/nx/schemas/project-schema.json",
+	"sourceRoot": "libraries/contact/src",
+	"prefix": "lib-contact",
+	"tags": ["feature"],
+	"projectType": "library",
+	"targets": {
+		"build": {
+			"executor": "@nx/angular:ng-packagr-lite",
+			"outputs": ["{workspaceRoot}/dist/{projectRoot}"],
+			"options": {
+				"project": "libraries/contact/ng-package.json"
+			},
+			"configurations": {
+				"production": {
+					"tsConfig": "libraries/contact/tsconfig.lib.prod.json"
+				},
+				"development": {
+					"tsConfig": "libraries/contact/tsconfig.lib.json"
+				}
+			},
+			"defaultConfiguration": "production"
+		},
+		"test": {
+			"executor": "@nx/jest:jest",
+			"outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+			"options": {
+				"jestConfig": "libraries/contact/jest.config.ts",
+				"passWithNoTests": true
+			},
+			"configurations": {
+				"ci": {
+					"ci": true,
+					"codeCoverage": true
+				}
+			}
+		},
+		"lint": {
+			"executor": "@nx/eslint:lint",
+			"outputs": ["{options.outputFile}"],
+			"options": {
+				"lintFilePatterns": [
+					"libraries/contact/**/*.ts",
+					"libraries/contact/**/*.html",
+					"libraries/contact/package.json"
+				]
+			}
+		}
+	}
+}

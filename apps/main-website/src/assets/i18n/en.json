@@ -1,3 +1,8 @@
 {
-	"test": "This is the english language."
+	"ui": {
+		"side-nav": {
+			"home": "Home",
+			"contact": "Contact"
+		}
+	}
 }
