@@ -1,4 +1,4 @@
-import { ChangeLanguageAction, SetLanguageSelectorStateAction } from './../../../../../../stores/ui/actions';
+import { ChangeLanguageAction, SetLanguageSelectorStateAction } from 'stores/ui/index';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { SharingModule } from './../../../../../../apps/main-website/src/app/sharing/sharing.module';
 import { CommonModule } from '@angular/common';

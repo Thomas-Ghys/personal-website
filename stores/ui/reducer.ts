@@ -8,7 +8,8 @@ export const uiStateReducer = createReducer(
 	on(ui.SetLanguageSelectorStateAction, uiState => ({
 		...uiState,
 		languageSelectorState: !uiState.languageSelectorState
-	}))
+	})),
+	on(ui.ChangeLanguageAction, (UIState, {language}) => ({...UIState, currentLanguage: language}))
 )
 
 export function reducer(uiState: UIState = INITIAL_UI_STATE, action: Action): UIState {

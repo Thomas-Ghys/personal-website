@@ -13,17 +13,19 @@
 <ng-template cdkConnectedOverlay
 			[cdkConnectedOverlayOrigin]="cdkOverlayButton" 
 			[cdkConnectedOverlayOpen]="languageSwitcherState">
-		<div class="language-switcher-overlay-container" 
-			*ngFor="let language of supportedLanguages">
+		<div class="language-switcher-overlay-container" >
 			<div class="language-switcher-overlay-wrapper" 
+			*ngFor="let language of supportedLanguages">
+			<div class="language-switcher-overlay-language-wrapper" 
 				[ngClass]="{'language-switcher-language-active': (selectedLanguage$ | async) === language.languageSelector}" 
 				(click)="changeLanguage(language.languageSelector)">
+				<div> 
+					<span>{{language.languageText | translate}}</span>
+				</div>
 				<span class="material-symbols-outlined" *ngIf="(selectedLanguage$ | async) === language.languageSelector">
 					check
 				</span>
-				<div>
-					<span>{{language.languageText | translate}}</span>
-				</div>
 			</div>
+		</div>
 		</div>
 </ng-template>
