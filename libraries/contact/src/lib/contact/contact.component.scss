@@ -1,0 +1,42 @@
+.contact-feature-container {
+	width: 100vw;
+	height: calc(100vh - var(--header-height));
+	overflow: hidden;
+	box-sizing: border-box;
+	padding-bottom: 0.5em;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: min-content auto;
+
+	.contact-picture-view {
+		-webkit-clip-path: polygon(0 0, 100% 0, 100% 75%, 0 95%);
+		clip-path: polygon(0 0, 100% 0, 100% 75%, 0 95%);
+		overflow: hidden;
+		display: flex;
+	
+		img {
+			width: 100vw;
+		}
+	}
+
+	.contact-options-wrapper {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: min-content auto;
+		box-sizing: border-box;
+		height: 100%;
+		margin: 0 1em 0 1em;
+		padding: 0.5em 1em;
+		background-color: var(--md-sys-color-surface-container-high);
+		border-radius: var(--md-sys-shape-extra-large);
+
+		.contact-options-title {
+			color: var(--md-sys-color-primary);
+		}
+
+		.contact-options-container {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+		}
+	}
+}

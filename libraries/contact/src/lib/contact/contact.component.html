@@ -1,1 +1,13 @@
-<p>contact works!</p>
+<div class="contact-feature-container">
+	<section class="contact-picture-view">
+		<img src="assets/pictures/aoNangBackground.jpg" alt="image">
+	</section>
+	<section class="contact-options-wrapper">
+		<div class="contact-options-title headline-large">Contact</div>
+		<div class="contact-options-container">
+			<div *ngFor="let contactType of this.contactOptions">
+				<lib-contact-contact-chip></lib-contact-contact-chip>
+			</div>
+		</div>
+	</section>
+</div>
