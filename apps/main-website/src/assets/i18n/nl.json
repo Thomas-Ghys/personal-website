@@ -2,6 +2,8 @@
 	"ui": {
 		"side-nav": {
 			"home": "Startpagina",
+			"about": "Over mezelf",
+			"project": "Projecten",
 			"contact": "Contact"
 		},
 		"language-switcher": {

@@ -16,8 +16,10 @@
 		"baseUrl": ".",
 		"paths": {
 			"@personal-website/UI": ["libraries/UI/src/index.ts"],
+			"@personal-website/about-me": ["about-me/src/index.ts"],
 			"@personal-website/contact": ["libraries/contact/src/index.ts"],
 			"@personal-website/home": ["libraries/home/src/index.ts"],
+			"@personal-website/project": ["libraries/project/src/index.ts"],
 			"@personal-website/styling": ["libraries/styling/src/index.ts"]
 		}
 	},

@@ -20,6 +20,7 @@
 
 	&:not(.side-nav-item-active):hover {
 		cursor: pointer;
+		background: var(--md-sys-color-surface-container);
 	}
 
 	&.side-nav-item-active {

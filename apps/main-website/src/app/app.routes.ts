@@ -1,5 +1,4 @@
 import { Route } from '@angular/router';
-import { AppComponent } from './app.component';
 
 export const appRoutes: Route[] = [
 	{
@@ -11,6 +10,16 @@ export const appRoutes: Route[] = [
 		path: 'home',
 		pathMatch: 'full',
 		loadChildren: () => import('./../../../../libraries/home/src/lib/lib.routes').then((m) => m.homeRoutes)
+	},
+	{
+		path: 'about',
+		pathMatch: 'full',
+		loadChildren: () => import('./../../../../libraries/about-me/src/lib/lib.routes').then((m) => m.aboutMeRoutes)
+	},
+	{
+		path: 'projects',
+		pathMatch: 'full',
+		loadChildren: () => import('./../../../../libraries/project/src/lib/lib.routes').then((m) => m.projectRoutes)
 	},
 	{
 		path: 'contact',

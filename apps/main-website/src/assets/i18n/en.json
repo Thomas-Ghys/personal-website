@@ -2,6 +2,8 @@
 	"ui": {
 		"side-nav": {
 			"home": "Home",
+			"about": "About me",
+			"project": "Projects",
 			"contact": "Contact"
 		},
 		"language-switcher": {
