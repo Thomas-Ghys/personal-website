@@ -6,34 +6,42 @@
 		<img [src]="this.contactCardData.contactIcon">
 	</div>
 	<div class="contact-card-data-wrapper">
-		<div class="contact-card-data-title">
+		<div class="contact-card-data-title headline-medium">
 			<span>{{this.contactCardData.contactTypeName | translate}}</span>
 		</div>
 		<ng-container [ngSwitch]="this.contactCardData.contactType">
 			<div class="contact-card-data-content-wrapper" *ngSwitchCase="'url'">
-				<span>{{'' | translate}}</span><span>{{this.contactCardData.contactLink}}</span>
+				<span class="title-large">{{'contact.contact-card.prefix.url' | translate}}</span>
+				<span class="contact-card-data-content-url body-large">{{this.contactCardData.contactLink}}</span>
 			</div>
 			<div class="contact-card-data-content-wrapper" *ngSwitchCase="'email'">
-				<span>{{'' | translate}}</span><span>{{this.contactCardData.contactLink}}</span>
+				<span class="title-large">{{'contact.contact-card.prefix.email' | translate}}</span>
+				<span class="body-large">{{this.contactCardData.contactLink}}</span>
 			</div>
 			<div class="contact-card-data-content-wrapper" *ngSwitchCase="'img'">
 				<div class="contact-card-data-content-image">
 					<div *ngIf="this.contactCardData.contactID !== ''">
-						<span>{{'' | translate}}</span><span>{{this.contactCardData.contactID}}</span>
+						<span class="title-large">{{'contact.contact-card.prefix.id' | translate}}</span>
+						<span class="body-large">{{this.contactCardData.contactID}}</span>
 					</div>
-					<img [src]="this.contactCardData.contactLink"
+					<div class="contact-card-data-content-image-wrapper">
+						<span class="title-large">{{'contact.contact-card.prefix.qr' | translate}}</span>
+						<img [src]="this.contactCardData.contactLink"
 						*ngIf="this.contactCardData.contactType === 'img'" 
 						cdkOverlayOrigin 
 						#fullscreenQRCode="cdkOverlayOrigin"
 						(click)="toggleOverlay(fullscreenQRCode)"
 						class="contact-chip-qr-icon">
+					</div>
 				</div>
 			</div>
 			<div class="contact-card-data-content-wrapper" *ngSwitchCase="'phone'">
-				<span>{{'' | translate}}</span><span>{{this.contactCardData.contactLink}}</span>
+				<span class="title-large">{{'contact.contact-card.prefix.number' | translate}}</span>
+				<span class="body-large">{{this.contactCardData.contactLink}}</span>
 			</div>
 			<div class="contact-card-data-content-wrapper" *ngSwitchCase="'ID'">
-				<span>{{'' | translate}}</span><span>{{this.contactCardData.contactID}}</span>
+				<span class="title-large">{{'contact.contact-card.prefix.id' | translate}}</span>
+				<span class="body-large">{{this.contactCardData.contactID}}</span>
 			</div>
 		</ng-container>
 	</div>

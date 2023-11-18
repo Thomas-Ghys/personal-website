@@ -1,7 +1,14 @@
 {
 	"contact": {
-		"contact": "Contact",
+		"contact": "Contact me:",
 		"contact-card": {
+			"prefix": {
+				"id": "ID: ",
+				"url": "Url: ",
+				"email": "Email: ",
+				"number": "Mobile: ",
+				"qr": "QR code: "
+			},
 			"title": {
 				"linkedin": "LinkedIn",
 				"github": "GitHub",

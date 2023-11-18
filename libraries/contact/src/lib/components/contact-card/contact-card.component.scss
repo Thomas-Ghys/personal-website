@@ -26,10 +26,31 @@
 	}
 
 	.contact-card-data-wrapper {
-		.contact-card-data-content-image {
-			.contact-chip-qr-icon {
-				width: 15em;
-			cursor: pointer;
+		.contact-card-data-title {
+			color: var(--md-sys-color-on-secondary-container);
+		}
+
+		.contact-card-data-content-wrapper {
+			color: var(--md-sys-color-on-secondary-container);
+
+			.contact-card-data-content-url {
+				text-decoration: underline;
+				color: var(--md-sys-color-tertiary);
+			}
+
+			.contact-card-data-content-image {
+				.contact-card-data-content-image-wrapper {
+					display: flex;
+					flex-direction: row;
+					align-items: center;
+					justify-content: flex-start;
+					gap: 0.5em;
+
+					.contact-chip-qr-icon {
+						width: 15em;
+						cursor: pointer;
+					}
+				}				
 			}
 		}
 	}

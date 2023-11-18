@@ -2,6 +2,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ContactType } from '../interfaces/contactType';
 import { ContactCardComponent } from '../components/contact-card/contact-card.component';
+import { ContactRootModule } from '../../contact.root.module';
 
 @Component({
     selector: 'lib-contact-contact',
@@ -11,7 +12,8 @@ import { ContactCardComponent } from '../components/contact-card/contact-card.co
     changeDetection: ChangeDetectionStrategy.OnPush,
     imports: [
 		CommonModule,
-		ContactCardComponent
+		ContactCardComponent,
+		ContactRootModule
 	]
 })
 export class ContactComponent {

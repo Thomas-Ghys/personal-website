@@ -7,7 +7,7 @@ import { CommonModule } from '@angular/common';
 import { ApplicationState } from 'stores/application-state';
 import { Store } from '@ngrx/store';
 import { OpenBlankTargetAction } from 'stores/core/index';
-import { SharingModule } from './../../../../../../apps/main-website/src/app/sharing/sharing.module';
+import { ContactRootModule } from 'libraries/contact/src/contact.root.module';
 
 @Component({
 	selector: 'lib-contact-contact-card',
@@ -17,7 +17,7 @@ import { SharingModule } from './../../../../../../apps/main-website/src/app/sha
 		OverlayModule,
 		MatIconModule,
 		MatButtonModule,
-		SharingModule
+		ContactRootModule
 	],
 	templateUrl: './contact-card.component.html',
 	styleUrls: ['./contact-card.component.scss'],
