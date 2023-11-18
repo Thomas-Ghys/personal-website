@@ -29,6 +29,48 @@
 
 		.contact-chip-qr-icon {
 			width: 15em;
+			cursor: pointer;
 		}
+	}
+}
+
+.contact-chip-fullscreen-overlay-wrapper {
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+  	top: 0;
+  	left: 0;
+  	right: 0;
+  	bottom: 0;
+	background: rgba(var(--md-sys-color-scrim-rgb), 0.75);
+  	display: grid;
+	grid-template-rows: min-content auto;
+	align-items: center;
+	justify-content: flex-start;
+
+	.contact-chip-fulscreen-overlay-close-button-wrapper {
+		width: 100vw;
+		display: flex;
+		flex-direction: row;
+		align-items: flex-start;
+		justify-content: flex-end;
+		padding: 1em;
+		box-sizing: border-box;
+
+		.contact-chip-fulscreen-overlay-close-button {
+			background-color: var(--md-sys-color-secondary-container);
+
+			mat-icon {
+				color: var(--md-sys-color-on-secondary-container);
+			}
+		}
+	}
+
+	.contact-chip-fulscreen-overlay-image-container {
+		width: 100vw;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
 	}
 }

@@ -21,12 +21,33 @@
 			<div class="title-large">
 				{{this.chipData.contactTypeName}}
 			</div>
-			<div class="body-large" *ngIf="this.chipData.contactType !== 'img'; else contactChipImage">
+			<div class="body-large" *ngIf="this.chipData.contactType !== 'img'">
 				{{this.chipData.contactLink}}
 			</div>
-			<ng-template #contactChipImage>
-				<img [src]="this.chipData.contactLink" class="contact-chip-qr-icon">
-			</ng-template>
+			<img [src]="this.chipData.contactLink"
+				*ngIf="this.chipData.contactType === 'img'" 
+				cdkOverlayOrigin 
+				#fullscreenQRCode="cdkOverlayOrigin"
+				(click)="toggleOverlay(fullscreenQRCode)"
+				class="contact-chip-qr-icon">
 		</div>	
+	</div>
+</ng-template>
+
+<ng-template cdkConnectedOverlay
+			[cdkConnectedOverlayOrigin]="fullscreenQRCode" 
+			[cdkConnectedOverlayOpen]="fullscreenQrCodeIsOpen">
+	<div class="contact-chip-fullscreen-overlay-wrapper" (click)="closeOverlay()">
+		<div class="contact-chip-fulscreen-overlay-close-button-wrapper">
+			<button mat-fab
+					class="contact-chip-fulscreen-overlay-close-button"
+					(click)="closeOverlay()">
+				<mat-icon>close</mat-icon>
+			</button>
+		</div>
+		<div class="contact-chip-fulscreen-overlay-image-container">
+			<img [src]="this.chipData.contactLink"
+			class="contact-chip-fullscreen-qr-code">
+		</div>
 	</div>
 </ng-template>
