@@ -10,23 +10,8 @@ import { SetMenuStateAction } from 'stores/ui';
 
 
 @Injectable()
-export class CoreEffectsService {
+export class ContactEffectsService {
 	constructor(private actions$: Actions, 
 				private store: Store<ApplicationState>, 
 				private router: Router) {}
-
-	navigateToRouteAction$: Observable<Action> = createEffect(() => this.actions$.pipe(
-		ofType(core.NavigateToRouteAction),
-		tap((action) => {
-			return this.router.navigate([action.routeToNavigateTo]);
-		})
-	), {dispatch: false});
-
-	openBlankTargetAction$: Observable<Action> = createEffect(() => this.actions$.pipe(
-		ofType(core.OpenBlankTargetAction),
-		tap((action) => {
-			console.log(action.route);
-			window.open(action.route, '_blank')?.focus();
-		})
-	), {dispatch: false});
 }

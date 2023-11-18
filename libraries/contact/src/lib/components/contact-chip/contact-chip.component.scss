@@ -1,0 +1,34 @@
+.contact-chip-wrapper {
+	display: grid;
+	grid-template-columns: 2.5em auto;
+	grid-gap: 1em;
+	align-items: center;
+	justify-content: flex-start;
+	height: fit-content;
+	padding: 0.5em 1em;
+	border-radius: var(--md-sys-shape-corner-medium);
+	box-sizing: border-box;
+	overflow: hidden;
+	background-color: var(--md-sys-color-surface-container-highest);
+	box-shadow: 1px 1px 1px 0px rgba(var(--md-sys-color-shadow-rgb),0.75);
+	-webkit-box-shadow: 1px 1px 1px 0px rgba(var(--md-sys-color-shadow-rgb),0.75);
+	-moz-box-shadow: 1px 1px 1px 0px rgba(var(--md-sys-color-shadow-rgb),0.75);
+
+	&.clickable-chip-wrapper:hover {
+		background-color: var(--md-sys-color-surface-container-low);
+		transform: scale(1.02);
+		cursor: pointer;
+	}
+
+	img {
+		width: 2.5em;
+	}
+
+	.contact-chip-text-container {
+		color: var(--md-sys-color-on-surface);
+
+		.contact-chip-qr-icon {
+			width: 15em;
+		}
+	}
+}

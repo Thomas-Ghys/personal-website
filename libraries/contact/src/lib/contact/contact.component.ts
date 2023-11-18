@@ -15,18 +15,33 @@ export class ContactComponent {
 	contactOptions: ContactType[] = [
 		{
 			contactTypeName: 'LinkedIn',
-			contactIcon: 'LinkedIn',
-			contactLink: 'www.linkedin.com/in/thomas-ghys-699a9b209'
+			contactIcon: 'assets/logo/linkedin_logo.svg',
+			contactLink: 'https://www.linkedin.com/in/thomas-ghys-699a9b209/',
+			contactType: 'url'
 		},
 		{
 			contactTypeName: 'Github',
-			contactIcon: 'Github',
-			contactLink: 'https://github.com/Thomas-Ghys'
+			contactIcon: 'assets/logo/github_logo.svg',
+			contactLink: 'https://github.com/Thomas-Ghys',
+			contactType: 'url'
 		},
 		{
 			contactTypeName: 'E-mail',
-			contactIcon: 'Email',
-			contactLink: 'thomas-ghys@outlook.com'
+			contactIcon: 'assets/logo/email_logo.svg',
+			contactLink: 'thomas-ghys@outlook.com',
+			contactType: 'email'
+		},
+		{
+			contactTypeName: 'Line',
+			contactIcon: 'assets/logo/line_logo.svg',
+			contactLink: 'assets/pictures/lineQrCode.jpg',
+			contactType: 'img'
+		},
+		{
+			contactTypeName: 'Whatsapp',
+			contactIcon: 'assets/logo/whatsapp_logo.svg',
+			contactLink: '+32 484 496 411',
+			contactType: 'phone'
 		}
 	]
 }

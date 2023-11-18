@@ -1,1 +1,32 @@
-<p>contact-chip works!</p>
+<div class="contact-chip-wrapper" 
+	[ngClass]="{'clickable-chip-wrapper' : this.chipData.contactType === 'url'}"
+	*ngIf="this.chipData.contactType === 'url';else unClickableContactChip"
+	(click)="this.routeToLink()">
+	<img [src]="this.chipData.contactIcon">
+	<div class="contact-chip-text-container">
+		<div class="title-large">
+			{{this.chipData.contactTypeName}}
+		</div>
+		<div class="body-large">
+			{{this.chipData.contactLink}}
+		</div>
+	</div>	
+</div>
+
+<ng-template #unClickableContactChip>
+	<div class="contact-chip-wrapper"
+	[ngClass]="{'clickable-chip-wrapper' : this.chipData.contactType === 'email'}">
+		<img [src]="this.chipData.contactIcon">
+		<div class="contact-chip-text-container">
+			<div class="title-large">
+				{{this.chipData.contactTypeName}}
+			</div>
+			<div class="body-large" *ngIf="this.chipData.contactType !== 'img'; else contactChipImage">
+				{{this.chipData.contactLink}}
+			</div>
+			<ng-template #contactChipImage>
+				<img [src]="this.chipData.contactLink" class="contact-chip-qr-icon">
+			</ng-template>
+		</div>	
+	</div>
+</ng-template>

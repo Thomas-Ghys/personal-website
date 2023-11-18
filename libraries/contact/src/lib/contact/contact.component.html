@@ -6,7 +6,9 @@
 		<div class="contact-options-title headline-large">Contact</div>
 		<div class="contact-options-container">
 			<div *ngFor="let contactType of this.contactOptions">
-				<lib-contact-contact-chip></lib-contact-contact-chip>
+				<lib-contact-contact-chip
+					[chipData]="contactType"
+				></lib-contact-contact-chip>
 			</div>
 		</div>
 	</section>
