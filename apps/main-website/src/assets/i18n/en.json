@@ -1,4 +1,16 @@
 {
+	"contact": {
+		"contact": "Contact",
+		"contact-card": {
+			"title": {
+				"linkedin": "LinkedIn",
+				"github": "GitHub",
+				"email": "Email",
+				"line": "Line",
+				"whatsapp": "WhatsApp"
+			}
+		}
+	},
 	"ui": {
 		"side-nav": {
 			"home": "Home",

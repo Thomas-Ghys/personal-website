@@ -3,12 +3,12 @@
 		<img src="assets/pictures/aoNangBackground.jpg" alt="image">
 	</section>
 	<section class="contact-options-wrapper">
-		<div class="contact-options-title headline-large">Contact</div>
+		<div class="contact-options-title display-large">Contact</div>
 		<div class="contact-options-container">
 			<div *ngFor="let contactType of this.contactOptions">
-				<lib-contact-contact-chip
-					[chipData]="contactType"
-				></lib-contact-contact-chip>
+				<lib-contact-contact-card 
+					[contactCardData]="contactType"
+				></lib-contact-contact-card>
 			</div>
 		</div>
 	</section>

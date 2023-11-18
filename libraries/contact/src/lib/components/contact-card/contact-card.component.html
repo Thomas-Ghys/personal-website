@@ -1,0 +1,58 @@
+<div class="contact-card-container"
+		[ngClass]="{
+			'contact-card-clickable-container': this.contactCardData.contactType === 'url' || this.contactCardData.contactType === 'email'}"
+		(click)="this.routeToLink()">
+	<div class="contact-card-logo-wrapper">
+		<img [src]="this.contactCardData.contactIcon">
+	</div>
+	<div class="contact-card-data-wrapper">
+		<div class="contact-card-data-title">
+			<span>{{this.contactCardData.contactTypeName | translate}}</span>
+		</div>
+		<ng-container [ngSwitch]="this.contactCardData.contactType">
+			<div class="contact-card-data-content-wrapper" *ngSwitchCase="'url'">
+				<span>{{'' | translate}}</span><span>{{this.contactCardData.contactLink}}</span>
+			</div>
+			<div class="contact-card-data-content-wrapper" *ngSwitchCase="'email'">
+				<span>{{'' | translate}}</span><span>{{this.contactCardData.contactLink}}</span>
+			</div>
+			<div class="contact-card-data-content-wrapper" *ngSwitchCase="'img'">
+				<div class="contact-card-data-content-image">
+					<div *ngIf="this.contactCardData.contactID !== ''">
+						<span>{{'' | translate}}</span><span>{{this.contactCardData.contactID}}</span>
+					</div>
+					<img [src]="this.contactCardData.contactLink"
+						*ngIf="this.contactCardData.contactType === 'img'" 
+						cdkOverlayOrigin 
+						#fullscreenQRCode="cdkOverlayOrigin"
+						(click)="toggleOverlay(fullscreenQRCode)"
+						class="contact-chip-qr-icon">
+				</div>
+			</div>
+			<div class="contact-card-data-content-wrapper" *ngSwitchCase="'phone'">
+				<span>{{'' | translate}}</span><span>{{this.contactCardData.contactLink}}</span>
+			</div>
+			<div class="contact-card-data-content-wrapper" *ngSwitchCase="'ID'">
+				<span>{{'' | translate}}</span><span>{{this.contactCardData.contactID}}</span>
+			</div>
+		</ng-container>
+	</div>
+</div>
+
+<ng-template cdkConnectedOverlay
+			[cdkConnectedOverlayOrigin]="fullscreenQRCode" 
+			[cdkConnectedOverlayOpen]="fullscreenQrCodeIsOpen">
+	<div class="contact-chip-fullscreen-overlay-wrapper" (click)="closeOverlay()">
+		<div class="contact-chip-fulscreen-overlay-close-button-wrapper">
+			<button mat-fab
+					class="contact-chip-fulscreen-overlay-close-button"
+					(click)="closeOverlay()">
+				<mat-icon>close</mat-icon>
+			</button>
+		</div>
+		<div class="contact-chip-fulscreen-overlay-image-container">
+			<img [src]="this.contactCardData.contactLink"
+			class="contact-chip-fullscreen-qr-code">
+		</div>
+	</div>
+</ng-template>

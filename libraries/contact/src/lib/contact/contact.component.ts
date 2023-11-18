@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ContactType } from '../interfaces/contactType';
-import { ContactChipComponent } from "../components/contact-chip/contact-chip.component";
+import { ContactCardComponent } from '../components/contact-card/contact-card.component';
 
 @Component({
     selector: 'lib-contact-contact',
@@ -9,36 +9,40 @@ import { ContactChipComponent } from "../components/contact-chip/contact-chip.co
     templateUrl: './contact.component.html',
     styleUrls: ['./contact.component.scss'],
     changeDetection: ChangeDetectionStrategy.OnPush,
-    imports: [CommonModule, ContactChipComponent]
+    imports: [
+		CommonModule,
+		ContactCardComponent
+	]
 })
 export class ContactComponent {
 	contactOptions: ContactType[] = [
 		{
-			contactTypeName: 'LinkedIn',
+			contactTypeName: 'contact.contact-card.title.linkedin',
 			contactIcon: 'assets/logo/linkedin_logo.svg',
 			contactLink: 'https://www.linkedin.com/in/thomas-ghys-699a9b209/',
 			contactType: 'url'
 		},
 		{
-			contactTypeName: 'Github',
+			contactTypeName: 'contact.contact-card.title.github',
 			contactIcon: 'assets/logo/github_logo.svg',
 			contactLink: 'https://github.com/Thomas-Ghys',
 			contactType: 'url'
 		},
 		{
-			contactTypeName: 'E-mail',
+			contactTypeName: 'contact.contact-card.title.email',
 			contactIcon: 'assets/logo/email_logo.svg',
 			contactLink: 'thomas-ghys@outlook.com',
 			contactType: 'email'
 		},
 		{
-			contactTypeName: 'Line',
+			contactTypeName: 'contact.contact-card.title.line',
 			contactIcon: 'assets/logo/line_logo.svg',
 			contactLink: 'assets/pictures/lineQrCode.jpg',
-			contactType: 'img'
+			contactType: 'img',
+			contactID: 'kacha1660'
 		},
 		{
-			contactTypeName: 'Whatsapp',
+			contactTypeName: 'contact.contact-card.title.whatsapp',
 			contactIcon: 'assets/logo/whatsapp_logo.svg',
 			contactLink: '+32 484 496 411',
 			contactType: 'phone'
