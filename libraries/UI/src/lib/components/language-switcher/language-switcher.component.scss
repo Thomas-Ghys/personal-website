@@ -3,7 +3,7 @@
 	color: var(--md-sys-color-on-surface-variant);
 	box-sizing: border-box;
 	padding: 16px 8px;
-	border-radius: 28px;
+	border-radius: var(--md-sys-shape-corner-extra-large);
 	display: flex;
 	flex-direction: column;
 	gap: 8px;
@@ -17,7 +17,7 @@
 		line-height: var(--md-sys-typescale-label-large-line-height);
 		letter-spacing: var(--md-sys-typescale-label-large-letter-spacing);
 		overflow: hidden;
-		border-radius: 28px;
+		border-radius: var(--md-sys-shape-corner-extra-large);
 		box-sizing: border-box;
 		padding: 8px 16px;
 		display: grid;

@@ -9,8 +9,8 @@
 	top: var(--header-height);
 	bottom: 0;
 	left: 0;
-	border-top-right-radius: 24px;
-	border-bottom-right-radius: 24px;
+	border-top-right-radius: var(--md-sys-shape-corner-large);
+	border-bottom-right-radius: var(--md-sys-shape-corner-large);
 
 	background: var(--md-sys-color-surface-variant);
 	color: var(--md-sys-color-on-surface-variant);
