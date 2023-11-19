@@ -1,8 +1,12 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ContactType } from '../interfaces/contactType';
 import { ContactCardComponent } from '../components/contact-card/contact-card.component';
 import { ContactRootModule } from '../../contact.root.module';
+import { ApplicationState } from 'stores/application-state';
+import { Store } from '@ngrx/store';
+import { SetCurrentRouteStateAction } from 'stores/core';
+import { BreakpointObserverDirective } from 'directives/breakpoint-observer/breakpoint-observer.directive';
 
 @Component({
     selector: 'lib-contact-contact',
@@ -13,10 +17,11 @@ import { ContactRootModule } from '../../contact.root.module';
     imports: [
 		CommonModule,
 		ContactCardComponent,
-		ContactRootModule
+		ContactRootModule,
+		BreakpointObserverDirective
 	]
 })
-export class ContactComponent {
+export class ContactComponent implements OnInit {
 	contactOptions: ContactType[] = [
 		{
 			contactTypeName: 'contact.contact-card.title.linkedin',
@@ -50,4 +55,10 @@ export class ContactComponent {
 			contactType: 'phone'
 		}
 	]
+
+	constructor(private store: Store<ApplicationState>) {}
+
+	ngOnInit(): void {
+		this.store.dispatch(SetCurrentRouteStateAction({currentRoute: 'contact'}));
+	}
 }

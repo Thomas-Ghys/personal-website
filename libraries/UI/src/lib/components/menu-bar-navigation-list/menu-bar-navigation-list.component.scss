@@ -1,0 +1,24 @@
+.menu-bar-navigation-list-wrapper {
+	display: flex;
+	flex-direction: row;
+	height: var(--header-height);
+	align-items: center;
+	justify-content: flex-start;
+	gap: 0.5em;
+
+	.menu-bar-navigation-list-grid {
+		color: var(--md-sys-color-inverse-primary);
+		display: grid;
+		box-sizing: border-box;
+		padding: 0.5em 1em;
+		overflow: hidden;
+		border-radius: var(--md-sys-shape-corner-extra-large);
+		cursor: pointer;
+
+		&.menu-bar-navigation-item-active {
+			background: var(--md-sys-color-secondary-container);
+			color: var(--md-sys-color-on-secondary-container);
+			cursor: unset;
+		}
+	}
+}

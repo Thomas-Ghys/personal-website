@@ -2,6 +2,8 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SideNavItemComponent } from '../../components/side-nav-item/side-nav-item.component';
 import { UIRootModule } from 'libraries/UI/src/ui.root.module';
+import { NavigationItem } from '../../interfaces/navigationItem';
+import { navigationData } from '../../data/navigationData';
 
 @Component({
   selector: 'lib-ui-side-nav',
@@ -16,27 +18,5 @@ import { UIRootModule } from 'libraries/UI/src/ui.root.module';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SideNavComponent {
-	protected sideNavItemConfiguration = [
-		{
-			sideNavIcon: 'home',
-			sideNavText: 'ui.side-nav.home',
-			sideNavUrl: 'home'
-		},
-		{
-			sideNavIcon: 'account_circle',
-			sideNavText: 'ui.side-nav.about',
-			sideNavUrl: 'about'
-		},
-		
-		{
-			sideNavIcon: 'bug_report',
-			sideNavText: 'ui.side-nav.project',
-			sideNavUrl: 'projects'
-		},
-		{
-			sideNavIcon: 'call',
-			sideNavText: 'ui.side-nav.contact',
-			sideNavUrl: 'contact'
-		},
-	]
+	protected sideNavItemConfiguration: NavigationItem[] = navigationData;
 }

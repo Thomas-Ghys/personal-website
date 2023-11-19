@@ -4,8 +4,12 @@
 	background-color: var(--md-sys-color-primary);
 	box-shadow: 0px 0px 10px 5px rgba(var(--md-sys-color-shadow-rgb),0.7);
 	display: grid;
-	grid-template-columns: 1fr auto min-content;
+	grid-template-columns: 1fr 0 min-content;
 	overflow: hidden;
+
+	&.breakpoint-larger-than-small {
+		grid-template-columns: 1fr 2fr min-content;
+	}
 
 	.menu-bar-toolbar-navigation-and-logo {
 		height: inherit;
