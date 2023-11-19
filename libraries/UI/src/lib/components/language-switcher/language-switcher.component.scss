@@ -1,3 +1,11 @@
+.language-switcher-wrapper {
+	height: var(--header-height);
+	width: var(--header-height);
+	display: grid;
+	align-items: center;
+	justify-content: center;
+}
+
 .language-switcher-overlay-container {
 	background: var(--md-sys-color-surface-variant);
 	color: var(--md-sys-color-on-surface-variant);

@@ -19,6 +19,9 @@
 		}
 	},
 	"ui": {
+		"menu-bar": {
+			"logo": "Thomas Ghys"
+		},
 		"side-nav": {
 			"home": "Home",
 			"about": "About me",

@@ -14,7 +14,7 @@ import { map, takeUntil } from 'rxjs/operators';
 import { BreakPoints } from './../interfaces/breakpoints';
 
 @Directive({
-	selector: '[IfBreakpointMatches]',
+	selector: '[ifBreakpointMatches]',
 	standalone: true
 })
 export class BreakpointMatcherDirective implements OnInit, OnDestroy {
@@ -26,14 +26,14 @@ export class BreakpointMatcherDirective implements OnInit, OnDestroy {
 	private selectedBreakPoints$: BehaviorSubject<string[]> = new BehaviorSubject<string[]>([]);
 
 	@Input()
-	set arxIfBreakpointMatches(breakPoints: BreakPoints[]) {
+	set ifBreakpointMatches(breakPoints: BreakPoints[]) {
 		const convertedBreakPoints: string[] = breakPoints.map((breakpoint: BreakPoints) => Breakpoints[breakpoint]);
 		this.selectedBreakPoints$.next(convertedBreakPoints);
 	}
 
 	@Input()
-	set arxIfBreakpointMatchesElse(templateRef: TemplateRef<unknown> | null) {
-		this.assertTemplate('IfBreakpointMatchesElse', templateRef);
+	set ifBreakpointMatchesElse(templateRef: TemplateRef<unknown> | null) {
+		this.assertTemplate('ifBreakpointMatchesElse', templateRef);
 		this.elseTemplateRef = templateRef;
 		this.elseViewRef = null;
 	}

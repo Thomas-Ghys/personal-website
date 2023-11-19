@@ -1,3 +1,4 @@
+import { BreakPoints } from './../interfaces/breakpoints';
 import { Directive, ElementRef, OnDestroy, OnInit } from "@angular/core";
 import { BreakpointObserver, Breakpoints, BreakpointState } from '@angular/cdk/layout';
 import { Subject, takeUntil } from "rxjs";
@@ -18,11 +19,11 @@ export class BreakpointObserverDirective implements OnInit, OnDestroy {
 			Breakpoints.Small,
 			Breakpoints.Medium,
 			Breakpoints.Large,
-			Breakpoints.XLarge,
+			Breakpoints.XLarge
 		]).pipe(
 			takeUntil(this.onDestroy$)
 		).subscribe((state: BreakpointState) => {
- 			Object.entries(Breakpoints).forEach(([breakpoint, breakpointValue]: [string, string]) => {
+			Object.entries(Breakpoints).forEach(([breakpoint, breakpointValue]: [string, string]) => {
 				this.filterClasses(state, breakpoint);
 
 				if (!breakpointValue.match(/orientation/g)) {
@@ -40,16 +41,16 @@ export class BreakpointObserverDirective implements OnInit, OnDestroy {
 	}	
 
 	private filterClasses(state: BreakpointState, breakpoint: string) {
-		if (state.breakpoints[Breakpoints[breakpoint]]) {
+		if (state.breakpoints[Breakpoints[breakpoint as keyof typeof Breakpoints]]) {
 			this.element.nativeElement.classList.add(`breakpoint-${breakpoint.toLowerCase()}`);
-		} else if (!state.breakpoints[Breakpoints[breakpoint]]) {
+		} else if (!state.breakpoints[Breakpoints[breakpoint as keyof typeof Breakpoints]]) {
 			this.element.nativeElement.classList.remove(`breakpoint-${breakpoint.toLowerCase()}`);
 		}
   }
 
   private filterComputationalClasses(state: BreakpointState) {
 	  this.computationalBreakpoints.forEach((breakpoint: string) => {
-		  if (state.breakpoints[Breakpoints[breakpoint]]) {
+		  if (state.breakpoints[Breakpoints[breakpoint as keyof typeof Breakpoints]]) {
 			  this.matchComputationalClasses(this.computationalBreakpoints.indexOf(breakpoint));
 		  }
 	  });

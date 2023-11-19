@@ -1,9 +1,16 @@
-<section class="menu-bar-toolbar">
-	<div class="menu-bar-toolbar-navigation">
-		<lib-ui-menu-toggle></lib-ui-menu-toggle>
+<section class="menu-bar-toolbar display-large" breakpointObserver>
+	<div class="menu-bar-toolbar-navigation-and-logo">
+		<div class="menu-bar-toolbar-navigation" 
+			*ifBreakpointMatches="['XSmall', 'Small']">
+			<lib-ui-menu-toggle></lib-ui-menu-toggle>
+		</div>
+		<div class="menu-bar-toolbar-logo display-small"
+			*ifBreakpointMatches="['Small', 'Medium', 'Large', 'XLarge']">
+			{{ 'ui.menu-bar.logo' | translate }}
+		</div>
 	</div>
 	<div class="menu-bar-toolbar-center">
-
+		<!-- TODO: implement web version of navigation -->
 	</div>
 	<div class="menu-bar-toolbar-right-icons">
 		<lib-ui-language-switcher></lib-ui-language-switcher>
