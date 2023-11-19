@@ -36,6 +36,7 @@
 		box-shadow: 5px 5px 5px 0px rgba(var(--md-sys-color-shadow-rgb),0.75);
 		-webkit-box-shadow: 5px 5px 5px 0px rgba(var(--md-sys-color-shadow-rgb),0.75);
 		-moz-box-shadow: 5px 5px 5px 0px rgba(var(--md-sys-color-shadow-rgb),0.75);
+		overflow: hidden;
 
 		&.breakpoint-smaller-than-medium {
 			height: 75vh;
@@ -46,10 +47,20 @@
 		}
 
 		.contact-options-container {
-			display: grid;
-			grid-template-columns: 1fr 1fr;
-			grid-gap: 1em;
-			overflow: hidden;
+			display: flex;
+			flex-direction: row;
+			gap: 0.5em;
+			flex-wrap: wrap;
+			overflow-x: hidden;
+			overflow-y: auto;
+			width: 100%;
+			box-sizing: border-box;
+			padding: 0.5em;
+
+			.contact-option-item {
+				flex: 1 0 48%;
+				box-sizing: border-box;
+			}
 		}
 	}
 }

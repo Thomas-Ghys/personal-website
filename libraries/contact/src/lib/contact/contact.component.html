@@ -5,7 +5,8 @@
 	<section class="contact-options-wrapper" breakpointObserver>
 		<div class="contact-options-title display-large">{{'contact.contact' | translate}}</div>
 		<div class="contact-options-container">
-			<div *ngFor="let contactType of this.contactOptions">
+			<div class="contact-option-item"
+				*ngFor="let contactType of this.contactOptions">
 				<lib-contact-contact-card 
 					[contactCardData]="contactType"
 				></lib-contact-contact-card>
