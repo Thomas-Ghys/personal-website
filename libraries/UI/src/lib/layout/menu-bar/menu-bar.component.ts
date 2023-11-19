@@ -8,6 +8,9 @@ import { LanguageSwitcherComponent } from './../../components/language-switcher/
 import { SideNavComponent } from '../side-nav/side-nav.component';
 import { UIRootModule } from 'libraries/UI/src/ui.root.module';
 import { MenuBarNavigationListComponent } from "../../components/menu-bar-navigation-list/menu-bar-navigation-list.component";
+import { ApplicationState } from 'stores/application-state';
+import { Store } from '@ngrx/store';
+import { NavigateToRouteAction } from 'stores/core';
 
 @Component({
     selector: 'lib-ui-menu-bar',
@@ -28,5 +31,9 @@ import { MenuBarNavigationListComponent } from "../../components/menu-bar-naviga
     ]
 })
 export class MenuBarComponent {
+	constructor(private store: Store<ApplicationState>) {}
 
+	navigateToHome() {
+		this.store.dispatch(NavigateToRouteAction({routeToNavigateTo: 'home'}));
+	}
 }
