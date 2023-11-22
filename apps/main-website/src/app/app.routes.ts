@@ -14,7 +14,7 @@ export const appRoutes: Route[] = [
 	{
 		path: 'about',
 		pathMatch: 'full',
-		redirectTo: 'home'
+		loadChildren: () => import('./../../../../libraries/about-me/src/lib/lib.routes').then((m) => m.aboutMeRoutes)
 	},
 	{
 		path: 'projects',
