@@ -1,10 +1,9 @@
-import { BreakPoints } from './../interfaces/breakpoints';
 import { Directive, ElementRef, OnDestroy, OnInit } from "@angular/core";
 import { BreakpointObserver, Breakpoints, BreakpointState } from '@angular/cdk/layout';
 import { Subject, takeUntil } from "rxjs";
 
 @Directive({
-	selector: '[breakpointObserver]',
+	selector: '[coreBreakpointObserver]',
 	standalone: true
 })
 export class BreakpointObserverDirective implements OnInit, OnDestroy {

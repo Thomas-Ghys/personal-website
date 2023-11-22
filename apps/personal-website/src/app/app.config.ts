@@ -9,8 +9,8 @@ import { provideEffects } from '@ngrx/effects';
 
 export const appConfig: ApplicationConfig = {
 	providers: [
-		provideEffects(),
 		provideStore(),
+		provideEffects(),
 		provideRouter(appRoutes, withEnabledBlockingInitialNavigation()),
 	],
 };

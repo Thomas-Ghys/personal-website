@@ -11,10 +11,10 @@ import {
 import { BehaviorSubject, combineLatest, Subject } from 'rxjs';
 import { BreakpointObserver, Breakpoints, BreakpointState } from '@angular/cdk/layout';
 import { map, takeUntil } from 'rxjs/operators';
-import { BreakPoints } from './../interfaces/breakpoints';
+import { BreakPoints } from '../../interfaces/breakpoints';
 
 @Directive({
-	selector: '[ifBreakpointMatches]',
+	selector: '[coreIfBreakpointMatches]',
 	standalone: true
 })
 export class BreakpointMatcherDirective implements OnInit, OnDestroy {
@@ -26,14 +26,14 @@ export class BreakpointMatcherDirective implements OnInit, OnDestroy {
 	private selectedBreakPoints$: BehaviorSubject<string[]> = new BehaviorSubject<string[]>([]);
 
 	@Input()
-	set ifBreakpointMatches(breakPoints: BreakPoints[]) {
+	set coreIfBreakpointMatches(breakPoints: BreakPoints[]) {
 		const convertedBreakPoints: string[] = breakPoints.map((breakpoint: BreakPoints) => Breakpoints[breakpoint]);
 		this.selectedBreakPoints$.next(convertedBreakPoints);
 	}
 
 	@Input()
-	set ifBreakpointMatchesElse(templateRef: TemplateRef<unknown> | null) {
-		this.assertTemplate('ifBreakpointMatchesElse', templateRef);
+	set coreIfBreakpointMatchesElse(templateRef: TemplateRef<unknown> | null) {
+		this.assertTemplate('coreIfBreakpointMatchesElse', templateRef);
 		this.elseTemplateRef = templateRef;
 		this.elseViewRef = null;
 	}
@@ -126,7 +126,7 @@ export class BreakpointMatcherDirective implements OnInit, OnDestroy {
 	}
 
 	private assertTemplate(property: string, templateRef: TemplateRef<unknown> | null): void {
-		const isTemplateRefOrNull: boolean = !!(!templateRef || templateRef.createEmbeddedView);
+		const isTemplateRefOrNull = !!(!templateRef || templateRef.createEmbeddedView);
 
 		if (!isTemplateRefOrNull) {
 			throw new Error(`${property} must be a TemplateRef, but received '${stringify(templateRef)}'.`);

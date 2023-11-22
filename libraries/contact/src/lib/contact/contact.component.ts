@@ -6,7 +6,7 @@ import { ContactRootModule } from '../../contact.root.module';
 import { ApplicationState } from 'stores/application-state';
 import { Store } from '@ngrx/store';
 import { SetCurrentRouteStateAction } from 'stores/core';
-import { BreakpointObserverDirective } from 'directives/breakpoint-observer/breakpoint-observer.directive';
+import { BreakpointObserverDirective } from 'libs/core/src/lib/directives/breakpoint-observer/breakpoint-observer.directive';
 
 @Component({
     selector: 'lib-contact-contact',

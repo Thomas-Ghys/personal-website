@@ -1,10 +1,13 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { NxWelcomeComponent } from './nx-welcome.component';
+import { MenuBarComponent } from '@personal-website/ui';
 
 @Component({
 	standalone: true,
-	imports: [NxWelcomeComponent, RouterModule],
+	imports: [
+		RouterModule,
+		MenuBarComponent
+	],
 	selector: 'personal-website-root',
 	templateUrl: './app.component.html',
 	styleUrls: ['./app.component.scss'],

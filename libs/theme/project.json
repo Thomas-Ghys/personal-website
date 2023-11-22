@@ -3,7 +3,7 @@
 	"$schema": "../../node_modules/nx/schemas/project-schema.json",
 	"sourceRoot": "libs/theme/src",
 	"prefix": "personal-website",
-	"tags": [],
+	"tags": ["library", "theme"],
 	"projectType": "library",
 	"targets": {
 		"build": {

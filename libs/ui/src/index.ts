@@ -1,3 +1,3 @@
 export * from './lib/lib.routes';
 
-export * from './lib/ui/ui.component';
+export * from './lib/menu-bar/menu-bar.component';

@@ -1,5 +1,5 @@
-import { BreakpointObserverDirective } from 'directives/breakpoint-observer/breakpoint-observer.directive';
-import { BreakpointMatcherDirective } from './../../../../../../directives/breakpoint-matcher/breakpoint-matcher.directive';
+import { BreakpointObserverDirective } from 'libs/core/src/lib/directives/breakpoint-observer/breakpoint-observer.directive';
+import { BreakpointMatcherDirective } from '../../../../../../libs/core/src/lib/directives/breakpoint-matcher/breakpoint-matcher.directive';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ThemeSwitcherComponent } from '../../components/theme-switcher/theme-switcher.component';

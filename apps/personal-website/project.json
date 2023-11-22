@@ -19,7 +19,10 @@
 					"apps/personal-website/src/favicon.ico",
 					"apps/personal-website/src/assets"
 				],
-				"styles": ["apps/personal-website/src/styles.scss"],
+				"styles": [
+					"apps/personal-website/src/styles.scss",
+					"libs/theme/src/lib/theme.scss"
+				],
 				"scripts": []
 			},
 			"configurations": {
