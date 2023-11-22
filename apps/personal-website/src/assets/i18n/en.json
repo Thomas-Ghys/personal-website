@@ -1,0 +1,36 @@
+{
+	"contact": {
+		"contact": "Contact me:",
+		"contact-card": {
+			"prefix": {
+				"id": "ID: ",
+				"url": "Url: ",
+				"email": "Email: ",
+				"number": "Mobile: ",
+				"qr": "QR code: "
+			},
+			"title": {
+				"linkedin": "LinkedIn",
+				"github": "GitHub",
+				"email": "Email",
+				"line": "Line",
+				"whatsapp": "WhatsApp"
+			}
+		}
+	},
+	"ui": {
+		"menu-bar": {
+			"logo": "Thomas Ghys"
+		},
+		"side-nav": {
+			"home": "Home",
+			"about": "About me",
+			"project": "Projects",
+			"contact": "Contact"
+		},
+		"language-switcher": {
+			"nl": "Dutch",
+			"en": "English"
+		}
+	}
+}
