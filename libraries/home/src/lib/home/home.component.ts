@@ -1,7 +1,6 @@
-import { SetCurrentRouteStateAction } from './../../../../../stores/core/actions';
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ApplicationState } from './../../../../../stores/application-state';
+import { ApplicationState, fromCore } from '@personal-website/core';
 import { Store } from '@ngrx/store';
 
 @Component({
@@ -17,6 +16,6 @@ export class HomeComponent implements OnInit {
 	constructor(private store: Store<ApplicationState>) {}
 
 	ngOnInit(): void {
-		this.store.dispatch(SetCurrentRouteStateAction({currentRoute: 'home'}));
+		this.store.dispatch(fromCore.SetCurrentRouteStateAction({currentRoute: 'home'}));
 	}
 }

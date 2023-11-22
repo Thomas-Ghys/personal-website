@@ -4,10 +4,9 @@ import { CdkOverlayOrigin, OverlayModule } from '@angular/cdk/overlay';
 import { ContactType } from './../../interfaces/contactType';
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ApplicationState } from 'stores/application-state';
 import { Store } from '@ngrx/store';
-import { OpenBlankTargetAction } from 'stores/core/index';
 import { ContactRootModule } from 'libraries/contact/src/contact.root.module';
+import { ApplicationState, fromCore } from '@personal-website/core';
 
 @Component({
 	selector: 'lib-contact-contact-card',
@@ -41,7 +40,7 @@ export class ContactCardComponent {
 			return;
 		}
 
-		this.store.dispatch(OpenBlankTargetAction({route: this.contactCardData.contactLink}));
+		this.store.dispatch(fromCore.OpenBlankTargetAction({route: this.contactCardData.contactLink}));
 	}
 
 	toggleOverlay(trigger: CdkOverlayOrigin) {

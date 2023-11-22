@@ -1,4 +1,4 @@
-import { NavigationItem } from "../interfaces/navigationItem";
+import { NavigationItem } from './../interfaces/navigationItem';
 
 export const navigationData: NavigationItem[] = [
 	{
@@ -22,4 +22,4 @@ export const navigationData: NavigationItem[] = [
 		sideNavText: 'ui.side-nav.contact',
 		sideNavUrl: 'contact'
 	},
-]
+];

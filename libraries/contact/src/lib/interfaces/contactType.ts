@@ -4,4 +4,4 @@ export type ContactType = {
 	contactIcon: string,
 	contactLink: string,
 	contactID?: string
-}
+};

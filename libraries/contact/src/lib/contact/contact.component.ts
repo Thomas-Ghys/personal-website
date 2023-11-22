@@ -3,10 +3,8 @@ import { CommonModule } from '@angular/common';
 import { ContactType } from '../interfaces/contactType';
 import { ContactCardComponent } from '../components/contact-card/contact-card.component';
 import { ContactRootModule } from '../../contact.root.module';
-import { ApplicationState } from 'stores/application-state';
 import { Store } from '@ngrx/store';
-import { SetCurrentRouteStateAction } from 'stores/core';
-import { BreakpointObserverDirective } from 'directives/breakpoint-observer/breakpoint-observer.directive';
+import { ApplicationState, BreakpointObserverDirective, fromCore } from '@personal-website/core';
 
 @Component({
     selector: 'lib-contact-contact',
@@ -54,11 +52,11 @@ export class ContactComponent implements OnInit {
 			contactLink: '+32 484 496 411',
 			contactType: 'phone'
 		}
-	]
+	];
 
 	constructor(private store: Store<ApplicationState>) {}
 
 	ngOnInit(): void {
-		this.store.dispatch(SetCurrentRouteStateAction({currentRoute: 'contact'}));
+		this.store.dispatch(fromCore.SetCurrentRouteStateAction({currentRoute: 'contact'}));
 	}
 }

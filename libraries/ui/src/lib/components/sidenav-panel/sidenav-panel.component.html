@@ -1,0 +1,14 @@
+<div class="side-nav-container">
+	<div class="side-nav-wrapper" 
+		*ngFor="let sideNavItem of sideNavItemConfiguration">
+		<div class="side-nav-item-container" 
+			[ngClass]="{'side-nav-item-active': (sideNavItemActive | async) === sideNavItem.sideNavUrl}">
+			<div class="side-nav-item-wrapper" (click)="navigateToRoute(sideNavItem.sideNavUrl)">
+				<mat-icon>{{sideNavItem.sideNavIcon}}</mat-icon>
+				<div>
+					<span>{{sideNavItem.sideNavText | translate}}</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

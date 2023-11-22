@@ -2,7 +2,7 @@
 	<div class="menu-bar-toolbar-navigation-and-logo">
 		<div class="menu-bar-toolbar-navigation" 
 			*ifBreakpointMatches="['XSmall', 'Small']">
-			<lib-ui-menu-toggle></lib-ui-menu-toggle>
+			<ui-sidenav-toggle></ui-sidenav-toggle>
 		</div>
 		<div class="menu-bar-toolbar-logo display-small"
 			(click)="navigateToHome()"
@@ -11,12 +11,12 @@
 		</div>
 	</div>
 	<div class="menu-bar-toolbar-center">
-		<lib-ui-menu-bar-navigation-list 
-			*ifBreakpointMatches="['Medium', 'Large', 'XLarge']"µ
-		></lib-ui-menu-bar-navigation-list>
+		<ui-horizontal-navigation
+			*ifBreakpointMatches="['Medium', 'Large', 'XLarge']"
+		></ui-horizontal-navigation>
 	</div>
 	<div class="menu-bar-toolbar-right-icons">
-		<lib-ui-language-switcher></lib-ui-language-switcher>
-		<lib-ui-theme-switcher></lib-ui-theme-switcher>
+		<ui-language-switcher></ui-language-switcher>
+		<ui-theme-switcher></ui-theme-switcher>
 	</div>
 </section>
