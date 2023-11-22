@@ -1,9 +1,0 @@
-<div class="side-nav-item-container" 
-	[ngClass]="{'side-nav-item-active': (sideNavItemActive | async) === sideNavUrl}">
-	<div class="side-nav-item-wrapper" (click)="navigateToRoute(sideNavUrl)">
-		<mat-icon>{{sideNavIcon}}</mat-icon>
-		<div>
-			<span>{{sideNavText | translate}}</span>
-		</div>
-	</div>
-</div>

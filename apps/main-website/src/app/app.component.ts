@@ -1,19 +1,18 @@
 import { TranslateService } from '@ngx-translate/core';
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { MenuBarComponent } from '@personal-website/UI';
 import { Title } from '@angular/platform-browser';
-import { ApplicationState } from 'stores/application-state';
 import { Store } from '@ngrx/store';
 import { SharingModule } from './sharing/sharing.module';
-import { ChangeLanguageAction } from 'stores/ui/index';
+import { MenuBarComponent } from '@personal-website/ui';
+import { ApplicationState, fromUI } from '@personal-website/core';
 
 @Component({
 	standalone: true,
 	imports: [
 		RouterModule,
-		MenuBarComponent,
-		SharingModule
+		SharingModule,
+		MenuBarComponent
 	],
 	selector: 'personal-website-root',
 	templateUrl: './app.component.html',
@@ -29,6 +28,6 @@ export class AppComponent {
 
 		translateService.setDefaultLang('en');
 		translateService.use('en');
-		this.store.dispatch(ChangeLanguageAction({language: 'en'}));
+		this.store.dispatch(fromUI.ChangeLanguageAction({language: 'en'}));
 	}
 }

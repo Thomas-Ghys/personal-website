@@ -1,23 +1,23 @@
-import { ChangeLanguageAction, SetLanguageSelectorStateAction } from 'stores/ui/index';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { SharingModule } from './../../../../../../apps/main-website/src/app/sharing/sharing.module';
 import { CommonModule } from '@angular/common';
-import { Observable } from 'rxjs';
-import { MatButtonModule } from '@angular/material/button';
-import { ApplicationState } from 'stores/application-state';
-import { Store, select } from '@ngrx/store';
 import { OverlayModule } from '@angular/cdk/overlay';
-import { getLanguageSelectorState, getSelectedLanguage } from 'stores/application-state';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { Observable } from 'rxjs';
+import { Store, select } from '@ngrx/store';
+import { ApplicationState, getLanguageSelectorState, getSelectedLanguage, fromUI } from '@personal-website/core';
+import { UiRootModule } from './../../../ui.root.module';
 import { TranslateService } from '@ngx-translate/core';
 
 @Component({
-	selector: 'lib-ui-language-switcher',
+	selector: 'ui-language-switcher',
 	standalone: true,
 	imports: [
 		CommonModule,
 		OverlayModule,
+		MatIconModule,
 		MatButtonModule,
-		SharingModule
+		UiRootModule
 	],
 	templateUrl: './language-switcher.component.html',
 	styleUrls: ['./language-switcher.component.scss'],
@@ -25,7 +25,6 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class LanguageSwitcherComponent {
 	protected languageSwitcherState$: Observable<boolean> = this.store.pipe(select(getLanguageSelectorState));
-	protected languageSwitcherState = false;
 	protected selectedLanguage$: Observable<string> = this.store.pipe(select(getSelectedLanguage));
 
 	protected supportedLanguages = [
@@ -43,12 +42,11 @@ export class LanguageSwitcherComponent {
 				private translateService: TranslateService) { }
 
 	toggleLanguageSwitcher() {
-		this.languageSwitcherState = !this.languageSwitcherState;
-		this.store.dispatch(SetLanguageSelectorStateAction());
+		this.store.dispatch(fromUI.SetLanguageSelectorStateAction());
 	}
 
 	changeLanguage(language: string) {
 		this.translateService.use(language);
-		this.store.dispatch(ChangeLanguageAction({language: language}));
+		this.store.dispatch(fromUI.ChangeLanguageAction({language: language}));
 	}
 }

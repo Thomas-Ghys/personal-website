@@ -1,22 +1,22 @@
-<section class="menu-bar-toolbar display-large" breakpointObserver>
+<section class="menu-bar-toolbar display-large" coreBreakpointObserver>
 	<div class="menu-bar-toolbar-navigation-and-logo">
 		<div class="menu-bar-toolbar-navigation" 
-			*ifBreakpointMatches="['XSmall', 'Small']">
-			<lib-ui-menu-toggle></lib-ui-menu-toggle>
+			*coreIfBreakpointMatches="['XSmall', 'Small']">
+			<ui-sidenav-toggle></ui-sidenav-toggle>
 		</div>
 		<div class="menu-bar-toolbar-logo display-small"
 			(click)="navigateToHome()"
-			*ifBreakpointMatches="['Small', 'Medium', 'Large', 'XLarge']">
+			*coreIfBreakpointMatches="['Small', 'Medium', 'Large', 'XLarge']">
 			{{ 'ui.menu-bar.logo' | translate }}
 		</div>
 	</div>
 	<div class="menu-bar-toolbar-center">
-		<lib-ui-menu-bar-navigation-list 
-			*ifBreakpointMatches="['Medium', 'Large', 'XLarge']"µ
-		></lib-ui-menu-bar-navigation-list>
+		<ui-horizontal-navigation
+			*coreIfBreakpointMatches="['Medium', 'Large', 'XLarge']"
+		></ui-horizontal-navigation>
 	</div>
 	<div class="menu-bar-toolbar-right-icons">
-		<lib-ui-language-switcher></lib-ui-language-switcher>
-		<lib-ui-theme-switcher></lib-ui-theme-switcher>
+		<ui-language-switcher></ui-language-switcher>
+		<ui-theme-switcher></ui-theme-switcher>
 	</div>
 </section>

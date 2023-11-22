@@ -1,0 +1,22 @@
+<div class="menu-toggle-wrapper">
+	<button mat-icon-button 
+			cdkOverlayOrigin 
+			#cdkOverlayButton="cdkOverlayOrigin"
+			class="menu-toggle-button"
+			(click)="toggleMenu()">
+		<span class="material-symbols-outlined"
+			*ngIf="(menuState$ | async) === false">
+			menu
+		</span>
+		<span class="material-symbols-outlined"
+			*ngIf="menuState$ | async">
+			menu_open
+		</span>
+	</button>
+</div>
+
+<ng-template cdkConnectedOverlay
+			[cdkConnectedOverlayOrigin]="cdkOverlayButton" 
+			[cdkConnectedOverlayOpen]="menuState">
+	<ui-sidenav-panel></ui-sidenav-panel>
+</ng-template>

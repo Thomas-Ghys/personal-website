@@ -26,4 +26,4 @@ export function HttpLoaderFactory(http: HttpClient) {
 	TranslateModule
   ]
 })
-export class UIRootModule { }
+export class UiRootModule { }
