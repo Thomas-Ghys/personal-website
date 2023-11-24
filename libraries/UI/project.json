@@ -8,9 +8,10 @@
 	"targets": {
 		"build": {
 			"executor": "@nx/angular:ng-packagr-lite",
-			"outputs": ["{workspaceRoot}/dist/{projectRoot}"],
+			"outputs": ["{workspaceRoot}/dist/libraries/ui"],
 			"options": {
-				"project": "libraries/ui/ng-package.json"
+				"project": "libraries/ui/ng-package.json",
+				"tsConfig": "libraries/ui/tsconfig.lib.json"
 			},
 			"configurations": {
 				"production": {
