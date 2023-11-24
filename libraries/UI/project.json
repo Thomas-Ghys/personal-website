@@ -3,21 +3,21 @@
 	"$schema": "../../node_modules/nx/schemas/project-schema.json",
 	"sourceRoot": "libraries/ui/src",
 	"prefix": "ui",
-	"tags": ["ui"],
+	"tags": ["ui", "feature"],
 	"projectType": "library",
 	"targets": {
 		"build": {
 			"executor": "@nx/angular:ng-packagr-lite",
 			"outputs": ["{workspaceRoot}/dist/{projectRoot}"],
 			"options": {
-				"project": "libraries/ui//ng-package.json"
+				"project": "libraries/ui/ng-package.json"
 			},
 			"configurations": {
 				"production": {
-					"tsConfig": "libraries/ui//tsconfig.lib.prod.json"
+					"tsConfig": "libraries/ui/tsconfig.lib.prod.json"
 				},
 				"development": {
-					"tsConfig": "libraries/ui//tsconfig.lib.json"
+					"tsConfig": "libraries/ui/tsconfig.lib.json"
 				}
 			},
 			"defaultConfiguration": "production"
@@ -41,8 +41,8 @@
 			"outputs": ["{options.outputFile}"],
 			"options": {
 				"lintFilePatterns": [
-					"libraries/ui//**/*.ts",
-					"libraries/ui//**/*.html",
+					"libraries/ui/**/*.ts",
+					"libraries/ui/**/*.html",
 					"libraries/ui/package.json"
 				]
 			}
