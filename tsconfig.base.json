@@ -20,8 +20,8 @@
 			"@personal-website/core": ["libraries/core/src/index.ts"],
 			"@personal-website/home": ["libraries/home/src/index.ts"],
 			"@personal-website/project": ["libraries/project/src/index.ts"],
+			"@personal-website/ui": ["libraries/ui/src/index.ts"],
 			"@personal-website/theme": ["libraries/theme/src/index.ts"],
-			"@personal-website/ui": ["libraries/ui/src/index.ts"]
 		}
 	},
 	"exclude": ["node_modules", "tmp"]
