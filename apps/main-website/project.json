@@ -10,8 +10,9 @@
 	},
 	"targets": {
 		"build": {
-			"dependsOn": ["@personal-webiste/ui"],
+			"dependsOn": ["^build"],
 			"executor": "@angular-devkit/build-angular:browser",
+			"inputs": ["production"],
 			"outputs": ["{options.outputPath}"],
 			"options": {
 				"outputPath": "dist/apps/main-website",
@@ -34,7 +35,7 @@
 					"budgets": [
 						{
 							"type": "initial",
-							"maximumWarning": "600kb",
+							"maximumWarning": "500kb",
 							"maximumError": "1mb"
 						},
 						{
