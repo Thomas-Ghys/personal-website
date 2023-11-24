@@ -2,8 +2,8 @@
 	"name": "ui",
 	"$schema": "../../node_modules/nx/schemas/project-schema.json",
 	"sourceRoot": "libraries/ui/src",
-	"prefix": "ui",
-	"tags": ["ui", "feature"],
+	"prefix": "lib-ui",
+	"tags": ["feature"],
 	"projectType": "library",
 	"targets": {
 		"build": {
