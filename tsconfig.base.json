@@ -15,12 +15,30 @@
 		"skipDefaultLibCheck": false,
 		"baseUrl": ".",
 		"paths": {
-			"@personal-website/ui": ["libraries/ui/src/index.ts"],
-			"@personal-website/about-me": ["libraries/about-me/src/index.ts"],
-			"@personal-website/contact": ["libraries/contact/src/index.ts"],
-			"@personal-website/core": ["libraries/core/src/index.ts"],
-			"@personal-website/home": ["libraries/home/src/index.ts"],
-			"@personal-website/project": ["libraries/project/src/index.ts"],
+			"@personal-website/ui": [
+				"libraries/ui/src/index.ts",
+				"dist/libraries/ui"
+			],
+			"@personal-website/about-me": [
+				"libraries/about-me/src/index.ts",
+				"dist/libraries/about-me"
+			],
+			"@personal-website/contact": [
+				"libraries/contact/src/index.ts",
+				"dist/libraries/contact"
+			],
+			"@personal-website/core": [
+				"libraries/core/src/index.ts",
+				"dist/libraries/core"
+			],
+			"@personal-website/home": [
+				"libraries/home/src/index.ts",
+				"dist/libraries/home"
+			],
+			"@personal-website/project": [
+				"libraries/project/src/index.ts",
+				"dist/libraries/project"
+			],
 			"@personal-website/theme": ["libraries/theme/src/index.ts"],
 		}
 	},
