@@ -2,7 +2,9 @@
 	"name": "@personal-website/source",
 	"version": "0.0.0",
 	"license": "MIT",
-	"scripts": {},
+	"scripts": {
+		"build": "nx build main-website"
+	},
 	"private": true,
 	"dependencies": {
 		"@angular/animations": "~16.2.0",
@@ -23,7 +25,7 @@
 		"@ngrx/store": "~16.0.0",
 		"@ngx-translate/core": "^15.0.0",
 		"@ngx-translate/http-loader": "^8.0.0",
-		"@nx/angular": "17.0.1",
+		"@nx/angular": "^17.0.1",
 		"redux-devtools-extension": "^2.13.9",
 		"rxjs": "~7.8.0",
 		"tslib": "^2.3.0",
