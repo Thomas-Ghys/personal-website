@@ -2,8 +2,22 @@
 	"name": "@personal-website/source",
 	"version": "0.0.0",
 	"license": "MIT",
+	"implicitDependencies": [
+		"@personal-website/about-me",
+		"@personal-website/contact",
+		"@personal-website/core",
+		"@personal-website/home",
+		"@personal-website/project",
+		"@personal-website/ui"
+	],
 	"scripts": {
-		"build": "nx build main-website"
+		"build": "nx build main-website",
+		"build-about-me": "nx build about-me",
+		"build-contact": "nx build contact",
+		"build-core": "nx build core",
+		"build-home": "nx build home",
+		"build-project": "nx build project",
+		"build-ui": "nx build ui"
 	},
 	"private": true,
 	"dependencies": {
