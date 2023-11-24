@@ -61,5 +61,10 @@
 			"style": "scss"
 		}
 	},
-	"neverConnectToCloud": true
+	"neverConnectToCloud": true,
+	"pluginsConfig": {
+		"@nx/js": {
+		  "analyzeSourceFiles": true
+		}
+	}
 }
