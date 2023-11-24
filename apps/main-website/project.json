@@ -8,6 +8,7 @@
 	"i18n": {
 		
 	},
+	"implicitDependencies": ["!ui"],
 	"targets": {
 		"build": {
 			"dependsOn": ["^build"],
