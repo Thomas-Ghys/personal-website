@@ -27,11 +27,12 @@
 					<div class="contact-card-data-content-image-wrapper">
 						<span class="title-large">{{'contact.contact-card.prefix.qr' | translate}}</span>
 						<img [src]="this.contactCardData.contactLink"
-						*ngIf="this.contactCardData.contactType === 'img'" 
-						cdkOverlayOrigin 
-						#fullscreenQRCode="cdkOverlayOrigin"
-						(click)="toggleOverlay(fullscreenQRCode)"
-						class="contact-chip-qr-icon">
+							*ngIf="this.contactCardData.contactType === 'img'" 
+							cdkOverlayOrigin 
+							coreBreakpointObserver
+							#fullscreenQRCode="cdkOverlayOrigin"
+							(click)="toggleOverlay(fullscreenQRCode)"
+							class="contact-chip-qr-icon">
 					</div>
 				</div>
 			</div>
@@ -60,7 +61,7 @@
 		</div>
 		<div class="contact-chip-fulscreen-overlay-image-container">
 			<img [src]="this.contactCardData.contactLink"
-			class="contact-chip-fullscreen-qr-code">
+				class="contact-chip-fullscreen-qr-code">
 		</div>
 	</div>
 </ng-template>

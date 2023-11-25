@@ -6,7 +6,7 @@ import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Store } from '@ngrx/store';
 import { ContactRootModule } from 'libraries/contact/src/contact.root.module';
-import { ApplicationState, fromCore } from '@personal-website/core';
+import { ApplicationState, BreakpointObserverDirective, fromCore } from '@personal-website/core';
 
 @Component({
 	selector: 'lib-contact-contact-card',
@@ -16,7 +16,8 @@ import { ApplicationState, fromCore } from '@personal-website/core';
 		OverlayModule,
 		MatIconModule,
 		MatButtonModule,
-		ContactRootModule
+		ContactRootModule,
+		BreakpointObserverDirective
 	],
 	templateUrl: './contact-card.component.html',
 	styleUrls: ['./contact-card.component.scss'],
