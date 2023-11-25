@@ -8,6 +8,10 @@ export const SetMenuStateAction = createAction(
 	'[UI] get menu state',
 )
 
+export const CloseMenuStateAction = createAction(
+	'[UI] close menu state'
+)
+
 export const GetLanguageSelectorStateAction = createAction(
 	'[UI] get language selector state',
 )

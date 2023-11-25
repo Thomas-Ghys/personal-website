@@ -22,12 +22,10 @@ import { SidenavPanelComponent } from '../sidenav-panel/sidenav-panel.component'
 })
 export class SidenavToggleComponent {
 	protected menuState$: Observable<boolean> = this.store.pipe(select(getUIMenuState));
-	protected menuState = false;
 	
 	constructor(private store: Store<ApplicationState>) {}
 
 	toggleMenu() {
-		this.menuState = !this.menuState;
 		this.store.dispatch(fromUI.SetMenuStateAction());
 	}
 }

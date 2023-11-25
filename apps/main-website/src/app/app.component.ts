@@ -19,13 +19,9 @@ import { ApplicationState, fromUI } from '@personal-website/core';
 	styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-	title = 'main-website';
-
 	constructor(private titleService: Title, 
 				private store: Store<ApplicationState>, 
 				private translateService: TranslateService) {
-		this.titleService.setTitle(`${this.title}`);
-
 		translateService.setDefaultLang('en');
 		translateService.use('en');
 		this.store.dispatch(fromUI.ChangeLanguageAction({language: 'en'}));

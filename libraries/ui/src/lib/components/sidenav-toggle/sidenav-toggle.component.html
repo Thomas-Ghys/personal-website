@@ -17,6 +17,6 @@
 
 <ng-template cdkConnectedOverlay
 			[cdkConnectedOverlayOrigin]="cdkOverlayButton" 
-			[cdkConnectedOverlayOpen]="menuState">
+			[cdkConnectedOverlayOpen]="(menuState$ | async) ?? false">
 	<ui-sidenav-panel></ui-sidenav-panel>
 </ng-template>

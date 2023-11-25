@@ -5,6 +5,7 @@ import { Router } from "@angular/router";
 import { Action, Store } from "@ngrx/store";
 import { Observable, tap } from "rxjs";
 import * as core from './actions';
+import { CloseMenuStateAction } from "../ui";
 
 
 @Injectable()
@@ -16,6 +17,7 @@ export class CoreEffectsService {
 	navigateToRouteAction$: Observable<Action> = createEffect(() => this.actions$.pipe(
 		ofType(core.NavigateToRouteAction),
 		tap((action) => {
+			this.store.dispatch(CloseMenuStateAction());
 			return this.router.navigate([action.routeToNavigateTo]);
 		})
 	), {dispatch: false});

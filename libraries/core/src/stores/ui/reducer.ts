@@ -1,5 +1,6 @@
+import { UIState } from './../../../../../dist/libraries/core/stores/ui/ui-state.d';
 import { Action, createReducer, on } from '@ngrx/store';
-import { INITIAL_UI_STATE, UIState } from "./ui-state";
+import { INITIAL_UI_STATE } from "./ui-state";
 import * as ui from './actions';
 
 export const uiStateReducer = createReducer(
@@ -9,7 +10,8 @@ export const uiStateReducer = createReducer(
 		...uiState,
 		languageSelectorState: !uiState.languageSelectorState
 	})),
-	on(ui.ChangeLanguageAction, (UIState, {language}) => ({...UIState, currentLanguage: language}))
+	on(ui.CloseMenuStateAction, (uiState) => ({...uiState, menuState: false})),
+	on(ui.ChangeLanguageAction, (uiState, {language}) => ({...uiState, currentLanguage: language}))
 )
 
 export function reducer(uiState: UIState = INITIAL_UI_STATE, action: Action): UIState {
