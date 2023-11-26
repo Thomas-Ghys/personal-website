@@ -6,7 +6,7 @@
 		<div class="contact-options-title display-large">{{'contact.contact' | translate}}</div>
 		<div class="contact-options-container">
 			<div class="contact-option-item"
-				*ngFor="let contactType of this.contactOptions">
+				*ngFor="let contactType of (contactOptions$ | async)">
 				<lib-contact-contact-card 
 					[contactCardData]="contactType"
 				></lib-contact-contact-card>

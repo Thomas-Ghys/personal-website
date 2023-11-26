@@ -11,7 +11,7 @@ import {
 import { BehaviorSubject, combineLatest, Subject } from 'rxjs';
 import { BreakpointObserver, Breakpoints, BreakpointState } from '@angular/cdk/layout';
 import { map, takeUntil } from 'rxjs/operators';
-import { BreakPoints } from './../interfaces/breakpoints';
+import { BreakPoints } from '../../types/BreakpointType';
 
 @Directive({
 	selector: '[coreIfBreakpointMatches]',

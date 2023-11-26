@@ -8,4 +8,5 @@ export * from './directives/breakpoint-observer/breakpoint-observer.directive';
 
 export * from './types/LanguageItemType';
 export * from './types/NavigationItemType';
-export * from './directives/interfaces/breakpoints';
+export * from './types/BreakpointType';
+export * from './types/ContactType';
