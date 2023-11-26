@@ -26,10 +26,19 @@ export const effects = [
 	fromUI.UIEffectsService
 ]
 
-export const getCoreState = createFeatureSelector<fromCore.CoreState>('core');
-export const getCurrentRoute = createSelector(getCoreState, fromCore.getCurrentRouteState);
-export const getPreviousRoute = createSelector(getCoreState, fromCore.getPreviousRouteState);
-export const getUIState = createFeatureSelector<UIState>('ui');
-export const getUIMenuState = createSelector(getUIState, fromUI.getMenuState);
-export const getLanguageSelectorState = createSelector(getUIState, fromUI.getLanguageSelectorState);
-export const getSelectedLanguage = createSelector(getUIState, fromUI.getCurrentSelectedLanguage);
+// ----- START: Core Selectors ----- //
+export const selectCoreState = createFeatureSelector<fromCore.CoreState>('core');
+
+export const selectCurrentRoute = createSelector(selectCoreState, fromCore.getCurrentRouteState);
+export const selectPreviousRoute = createSelector(selectCoreState, fromCore.getPreviousRouteState);
+// ----- END: Core Selectors ----- //
+
+// ----- START: UI Selectors ----- //
+export const selectUIState = createFeatureSelector<UIState>('ui');
+
+export const selectUIMenuState = createSelector(selectUIState, fromUI.getMenuState);
+export const selectLanguageSelectorState = createSelector(selectUIState, fromUI.getLanguageSelectorState);
+export const selectSelectedLanguage = createSelector(selectUIState, fromUI.getCurrentSelectedLanguage);
+export const selectNavigationItems = createSelector(selectUIState, fromUI.getSupportedNavigationItems);
+export const selectSupportedLanguages = createSelector(selectUIState, fromUI.getSupportedLanguages);
+// ----- END: UI Selectors ----- //

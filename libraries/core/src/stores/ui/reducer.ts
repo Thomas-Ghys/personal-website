@@ -16,7 +16,3 @@ export const uiStateReducer = createReducer(
 export function reducer(uiState: UIState = INITIAL_UI_STATE, action: Action): UIState {
 	return uiStateReducer(uiState, action);
 }
-
-export const getMenuState = (uiState: UIState): boolean => uiState.menuState;
-export const getLanguageSelectorState = (uiState: UIState): boolean => uiState.languageSelectorState;
-export const getCurrentSelectedLanguage = (uiState: UIState): string => uiState.currentLanguage;

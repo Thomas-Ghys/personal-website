@@ -1,7 +1,7 @@
 <div class="menu-bar-navigation-list-wrapper">
 	<div class="menu-bar-navigation-list-grid title-large"
 		[ngClass]="{'menu-bar-navigation-item-active': horizontalNavigationItem.sideNavUrl === (this.sideNavItemActive | async)}"
-		*ngFor="let horizontalNavigationItem of horizontalNavigationItems">
+		*ngFor="let horizontalNavigationItem of (horizontalNavigationItems$ | async)">
 		<div (click)="navigateToUrl(horizontalNavigationItem.sideNavUrl)">
 			{{horizontalNavigationItem.sideNavText | translate}}
 		</div>

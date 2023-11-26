@@ -1,6 +1,6 @@
 <div class="side-nav-container">
 	<div class="side-nav-wrapper" 
-		*ngFor="let sideNavItem of sideNavItemConfiguration">
+		*ngFor="let sideNavItem of (sideNavItemConfiguration$ | async)">
 		<div class="side-nav-item-container" 
 			[ngClass]="{'side-nav-item-active': (sideNavItemActive | async) === sideNavItem.sideNavUrl}">
 			<div class="side-nav-item-wrapper" (click)="navigateToRoute(sideNavItem.sideNavUrl)">

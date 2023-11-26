@@ -5,9 +5,10 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { Observable } from 'rxjs';
 import { Store, select } from '@ngrx/store';
-import { ApplicationState, getLanguageSelectorState, getSelectedLanguage, fromUI } from '@personal-website/core';
+import { ApplicationState, selectLanguageSelectorState, selectSelectedLanguage, fromUI, selectSupportedLanguages } from '@personal-website/core';
 import { UiRootModule } from './../../../ui.root.module';
 import { TranslateService } from '@ngx-translate/core';
+import { LanguageItem } from 'libraries/core/src/types/LanguageItemType';
 
 @Component({
 	selector: 'ui-language-switcher',
@@ -24,19 +25,10 @@ import { TranslateService } from '@ngx-translate/core';
 	changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class LanguageSwitcherComponent {
-	protected languageSwitcherState$: Observable<boolean> = this.store.pipe(select(getLanguageSelectorState));
-	protected selectedLanguage$: Observable<string> = this.store.pipe(select(getSelectedLanguage));
-
-	protected supportedLanguages = [
-		{
-			languageText: 'ui.language-switcher.en',
-			languageSelector: 'en'
-		},
-		{
-			languageText: 'ui.language-switcher.nl',
-			languageSelector: 'nl'
-		},
-	];
+	protected languageSwitcherState$: Observable<boolean> = this.store.pipe(select(selectLanguageSelectorState));
+	protected selectedLanguage$: Observable<string> = this.store.pipe(select(selectSelectedLanguage));
+	protected supportedLanguages$: Observable<LanguageItem[]> = this.store.pipe(select(selectSupportedLanguages));
+	
 
 	constructor(private store: Store<ApplicationState>, 
 				private translateService: TranslateService) { }

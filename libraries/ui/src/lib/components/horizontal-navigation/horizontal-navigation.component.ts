@@ -1,10 +1,8 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NavigationItem } from '../../interfaces/navigationItem';
-import { navigationData } from '../../data/navigationData';
 import { Observable } from 'rxjs';
 import { Store, select } from '@ngrx/store';
-import { ApplicationState, getCurrentRoute, fromCore } from '@personal-website/core';
+import { ApplicationState, selectCurrentRoute, fromCore, selectNavigationItems, NavigationItem } from '@personal-website/core';
 import { UiRootModule } from 'libraries/ui/src/ui.root.module';
 
 @Component({
@@ -19,8 +17,8 @@ import { UiRootModule } from 'libraries/ui/src/ui.root.module';
 	changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HorizontalNavigationComponent {
-	protected horizontalNavigationItems: NavigationItem[] = navigationData;
-	protected sideNavItemActive: Observable<string> = this.store.pipe(select(getCurrentRoute));
+	protected horizontalNavigationItems$: Observable<NavigationItem[]> = this.store.pipe(select(selectNavigationItems));
+	protected sideNavItemActive: Observable<string> = this.store.pipe(select(selectCurrentRoute));
 	
 	constructor(private store: Store<ApplicationState>) { }
 

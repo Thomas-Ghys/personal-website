@@ -2,9 +2,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Observable } from 'rxjs';
 import { Store, select } from '@ngrx/store';
-import { ApplicationState, getCurrentRoute, fromCore } from '@personal-website/core';
-import { navigationData } from '../../data/navigationData';
-import { NavigationItem } from '../../interfaces/navigationItem';
+import { ApplicationState, selectCurrentRoute, fromCore, NavigationItem, selectNavigationItems } from '@personal-website/core';
 import { UiRootModule } from 'libraries/ui/src/ui.root.module';
 import { MatIconModule } from '@angular/material/icon';
 
@@ -21,8 +19,8 @@ import { MatIconModule } from '@angular/material/icon';
 	changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SidenavPanelComponent {
-	protected sideNavItemConfiguration: NavigationItem[] = navigationData;
-	protected sideNavItemActive: Observable<string> = this.store.pipe(select(getCurrentRoute));
+	protected sideNavItemConfiguration$: Observable<NavigationItem[]> = this.store.pipe(select(selectNavigationItems));
+	protected sideNavItemActive: Observable<string> = this.store.pipe(select(selectCurrentRoute));
 
 	constructor(private store: Store<ApplicationState>) { }
 

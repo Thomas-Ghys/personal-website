@@ -15,7 +15,7 @@
 			[cdkConnectedOverlayOpen]="(languageSwitcherState$ | async)!">
 		<div class="language-switcher-overlay-container" >
 			<div class="language-switcher-overlay-wrapper" 
-			*ngFor="let language of supportedLanguages">
+			*ngFor="let language of (supportedLanguages$ |async)">
 				<div class="language-switcher-overlay-language-wrapper" 
 					[ngClass]="{'language-switcher-language-active': (selectedLanguage$ | async) === language.languageSelector}" 
 					(click)="changeLanguage(language.languageSelector)">

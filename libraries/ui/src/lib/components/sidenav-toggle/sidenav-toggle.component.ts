@@ -2,7 +2,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Observable } from 'rxjs';
 import { Store, select } from '@ngrx/store';
-import { ApplicationState, fromUI, getUIMenuState } from '@personal-website/core';
+import { ApplicationState, fromUI, selectUIMenuState } from '@personal-website/core';
 import { MatButtonModule } from '@angular/material/button';
 import { OverlayModule } from '@angular/cdk/overlay';
 import { SidenavPanelComponent } from '../sidenav-panel/sidenav-panel.component';
@@ -21,7 +21,7 @@ import { SidenavPanelComponent } from '../sidenav-panel/sidenav-panel.component'
 	changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SidenavToggleComponent {
-	protected menuState$: Observable<boolean> = this.store.pipe(select(getUIMenuState));
+	protected menuState$: Observable<boolean> = this.store.pipe(select(selectUIMenuState));
 	
 	constructor(private store: Store<ApplicationState>) {}
 
