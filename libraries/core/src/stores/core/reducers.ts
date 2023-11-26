@@ -18,6 +18,3 @@ export const coreStateReducer = createReducer(
 export function reducer(coreState: CoreState = INITIAL_CORE_STATE, action: Action): CoreState {
 	return coreStateReducer(coreState, action);
 }
-
-export const getCurrentRouteState = (coreState: CoreState): string => coreState.currentRoute;
-export const getPreviousRouteState = (coreState: CoreState): string => coreState.previousRoute;
