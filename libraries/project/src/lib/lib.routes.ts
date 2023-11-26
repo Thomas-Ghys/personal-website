@@ -3,7 +3,16 @@ import { ProjectComponent } from './project/project.component';
 
 export const projectRoutes: Route[] = [
 	{ 
-		path: '', 
-		component: ProjectComponent 
+		path: '',
+		children: [
+			{
+				path: '',
+				pathMatch: 'full',
+				component: ProjectComponent,
+				children: [
+					
+				]
+			}
+		] 
 	},
 ];
