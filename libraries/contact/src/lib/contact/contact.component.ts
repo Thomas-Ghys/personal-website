@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ContactType } from '../../../../core/src/types/ContactType';
+import { ContactType } from '@personal-website/core';
 import { ContactCardComponent } from '../components/contact-card/contact-card.component';
 import { ContactRootModule } from '../../contact.root.module';
 import { Store, select } from '@ngrx/store';

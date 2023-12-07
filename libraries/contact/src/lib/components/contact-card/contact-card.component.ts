@@ -1,7 +1,7 @@
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { CdkOverlayOrigin, OverlayModule } from '@angular/cdk/overlay';
-import { ContactType } from '../../../../../core/src/types/ContactType';
+import { ContactType } from '@personal-website/core';
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Store } from '@ngrx/store';

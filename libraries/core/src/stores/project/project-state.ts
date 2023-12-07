@@ -1,4 +1,4 @@
-import { ProjectCard } from "@personal-website/core";
+import { ProjectCard } from "./../../types/ProjectCardType";
 
 export interface ProjectState {
 	projects: ProjectCard[];

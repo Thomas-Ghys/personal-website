@@ -8,7 +8,7 @@ import { Store, select } from '@ngrx/store';
 import { ApplicationState, selectLanguageSelectorState, selectSelectedLanguage, fromUI, selectSupportedLanguages } from '@personal-website/core';
 import { UiRootModule } from './../../../ui.root.module';
 import { TranslateService } from '@ngx-translate/core';
-import { LanguageItem } from 'libraries/core/src/types/LanguageItemType';
+import { LanguageItem } from '@personal-website/core';
 
 @Component({
 	selector: 'ui-language-switcher',
