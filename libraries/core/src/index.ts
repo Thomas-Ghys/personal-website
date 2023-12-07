@@ -10,3 +10,4 @@ export * from './types/LanguageItemType';
 export * from './types/NavigationItemType';
 export * from './types/BreakpointType';
 export * from './types/ContactType';
+export * from './types/ProjectCardType';

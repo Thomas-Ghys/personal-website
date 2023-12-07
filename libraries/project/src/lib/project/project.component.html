@@ -9,10 +9,8 @@
 	</section>
 	<section class="project-body-wrapper">
 		<div class="project-body-project-cards-container" 
-			*ngFor="let x of [1, 2, 3 ,4,5,6,7,8,9,10,11,12,13]">
-			<div>
-				x
-			</div>
+			*ngFor="let projectCard of (projects$ | async)">
+			<lib-project-project-card [project]="projectCard"/>
 		</div>
 	</section>
 </div>

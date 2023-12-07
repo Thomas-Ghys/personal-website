@@ -18,6 +18,16 @@
 			}
 		}
 	},
+	"project": {
+		"project-card": {
+			"personal-website": {
+				"name": "Persoonlijke website",
+				"description": {
+					"0": "Dit is een tijdelijke dummy bescrijving"
+				}
+			}
+		}
+	},
 	"ui": {
 		"menu-bar": {
 			"logo": "Thomas Ghys"

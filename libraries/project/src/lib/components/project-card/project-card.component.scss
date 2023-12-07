@@ -1,0 +1,38 @@
+.lib-project-project-card-container {
+	width: min(100dvw, 40em);
+	height: 25em;
+	box-sizing: border-box;	
+	padding: 0.5em 1em;
+	border-radius: var(--md-sys-shape-corner-medium);
+	overflow: hidden;
+	background-color: var(--md-sys-color-surface-container-high);
+	box-shadow: 1px 1px 1px 0px rgba(var(--md-sys-color-shadow-rgb),0.75);
+	-webkit-box-shadow: 1px 1px 1px 0px rgba(var(--md-sys-color-shadow-rgb),0.75);
+	-moz-box-shadow: 1px 1px 1px 0px rgba(var(--md-sys-color-shadow-rgb),0.75);
+	display: grid;
+	grid-template-rows: 40% 60%;
+
+	&:hover {
+		cursor: pointer;
+		background-color: var(--md-sys-color-surface-container-low);
+	}
+
+	.lib-project-project-card-image-wrapper {
+		overflow: hidden;
+		border-top-left-radius: var(--md-sys-shape-corner-medium);
+		border-top-right-radius: var(--md-sys-shape-corner-medium);
+		height: 100%;
+		width: 100%;
+	}
+
+	.lib-project-project-card-body-wrapper {
+		display: flex;
+		flex-direction: column;
+		gap: 0.25em;
+		overflow: hidden;
+
+		.lib-project-project-card-body-headline {
+			color: var(--md-sys-color-on-secondary-container);
+		}
+	}
+}

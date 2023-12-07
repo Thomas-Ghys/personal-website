@@ -15,10 +15,6 @@
 		"skipDefaultLibCheck": false,
 		"baseUrl": ".",
 		"paths": {
-			"@personal-website/ui": [
-				"libraries/ui/src/index.ts",
-				"dist/libraries/ui"
-			],
 			"@personal-website/about-me": [
 				"libraries/about-me/src/index.ts",
 				"dist/libraries/about-me"
@@ -40,6 +36,10 @@
 				"dist/libraries/project"
 			],
 			"@personal-website/theme": ["libraries/theme/src/index.ts"],
+			"@personal-website/ui": [
+				"libraries/ui/src/index.ts",
+				"dist/libraries/ui"
+			]
 		}
 	},
 	"exclude": ["node_modules", "tmp"]

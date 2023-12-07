@@ -1,0 +1,18 @@
+<div class="lib-project-project-card-container">
+	<header class="lib-project-project-card-image-wrapper">
+		<img [src]="project.projectImage"/>
+	</header>
+	<body class="lib-project-project-card-body-wrapper">
+		<div class="headline-large lib-project-project-card-body-headline">
+			{{ project.projectName | translate }}
+		</div>
+		<div *ngFor="let projectTag of project.projectTags">
+
+		</div>
+		<div>
+			<div *ngFor="let projectDescription of project.projectDescription">
+				{{ projectDescription | translate }}
+			</div>
+		</div>
+	</body>
+</div>
