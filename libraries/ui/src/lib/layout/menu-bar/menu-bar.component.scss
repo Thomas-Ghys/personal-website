@@ -23,6 +23,20 @@
 			width: var(--header-height);
 		}
 
+		.menu-bar-toolbar-logo-image {
+			height: var(--header-height);
+			width: var(--header-height);
+
+			img {				
+				height: var(--header-height);
+				width: var(--header-height);
+			}
+
+			&:hover {
+				cursor: pointer;
+			}
+		}
+
 		.menu-bar-toolbar-logo {
 			color: var(--md-sys-color-on-primary);
 			padding-left: 0.5em;

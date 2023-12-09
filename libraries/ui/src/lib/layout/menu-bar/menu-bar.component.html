@@ -4,6 +4,10 @@
 			*coreIfBreakpointMatches="['XSmall', 'Small']">
 			<ui-sidenav-toggle></ui-sidenav-toggle>
 		</div>
+		<div class="menu-bar-toolbar-logo-image" 
+		(click)="navigateToHome()">
+			<img src="assets/logo/PersonalLogo.png"/>
+		</div>
 		<div class="menu-bar-toolbar-logo display-small"
 			(click)="navigateToHome()"
 			*coreIfBreakpointMatches="['Small', 'Medium', 'Large', 'XLarge']">
