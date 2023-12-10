@@ -13,7 +13,10 @@ export const appConfig: ApplicationConfig = {
 	providers: [
 		provideEffects(fromApplicationState.effects),
 		provideStore(fromApplicationState.reducers),
-		provideRouter(appRoutes, withEnabledBlockingInitialNavigation()),
+		provideRouter(
+			appRoutes,
+			withEnabledBlockingInitialNavigation()
+		),
 		provideStoreDevtools()
 	],
 };

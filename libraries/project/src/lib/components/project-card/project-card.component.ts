@@ -1,7 +1,9 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ProjectCard } from '@personal-website/core';
+import { ApplicationState, ProjectCard } from '@personal-website/core';
 import { ProjectRootModule } from 'libraries/project/src/project.root.module';
+import { Store } from '@ngrx/store';
+import { NavigateToRouteAction } from 'libraries/core/src/stores/core';
 
 @Component({
 	selector: 'lib-project-project-card',
@@ -19,6 +21,13 @@ export class ProjectCardComponent {
 		projectImage: '',
 		projectTags: [],
 		projectName: '',
-		projectDescription: []
+		projectDescription: [],
+		projectUrl: ''
 	};
+
+	constructor(private store: Store<ApplicationState>) { }
+
+	navigateToProject(url: string) {
+		this.store.dispatch(NavigateToRouteAction({routeToNavigateTo: url}));
+	}
 }

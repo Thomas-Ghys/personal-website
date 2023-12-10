@@ -18,7 +18,7 @@ export class CoreEffectsService {
 		ofType(core.NavigateToRouteAction),
 		tap((action) => {
 			this.store.dispatch(CloseMenuStateAction());
-			return this.router.navigate([action.routeToNavigateTo]);
+			this.router.navigate([action.routeToNavigateTo]);
 		})
 	), {dispatch: false});
 

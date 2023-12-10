@@ -2,29 +2,25 @@ import { Route } from '@angular/router';
 
 export const appRoutes: Route[] = [
 	{
-		path: '',
-		pathMatch: 'full',
-		redirectTo: 'home'
-	},
-	{
 		path: 'home',
-		pathMatch: 'full',
-		loadChildren: () => import('./../../../../libraries/home/src/lib/lib.routes').then((m) => m.homeRoutes)
+		loadChildren: () => import('@personal-website/home').then((m) => m.homeRoutes)
 	},
 	{
 		path: 'about',
-		pathMatch: 'full',
-		loadChildren: () => import('./../../../../libraries/about-me/src/lib/lib.routes').then((m) => m.aboutMeRoutes)
+		loadChildren: () => import('@personal-website/about-me').then((m) => m.aboutMeRoutes)
 	},
 	{
 		path: 'projects',
-		pathMatch: 'full',
-		loadChildren: () => import('./../../../../libraries/project/src/lib/lib.routes').then((m) => m.projectRoutes)
+		loadChildren: () => import('@personal-website/project').then((m) => m.projectRoutes)
 	},
 	{
 		path: 'contact',
+		loadChildren: () => import('@personal-website/contact').then((m) => m.contactRoutes)
+	},
+	{
+		path: '',
 		pathMatch: 'full',
-		loadChildren: () => import('./../../../../libraries/contact/src/lib/lib.routes').then((m) => m.contactRoutes)
+		redirectTo: 'home'
 	},
 	{
 		path: '**',

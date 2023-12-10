@@ -10,7 +10,10 @@ import { Observable } from 'rxjs';
     standalone: true,
     templateUrl: './project.component.html',
     styleUrls: ['./project.component.scss'],
-    imports: [CommonModule, ProjectCardComponent]
+    imports: [
+		CommonModule, 
+		ProjectCardComponent
+	]
 })
 export class ProjectComponent implements OnInit {
 	public projects$: Observable<ProjectCard[]> = this.store.pipe(select(selectProjects));
@@ -19,6 +22,5 @@ export class ProjectComponent implements OnInit {
 
 	ngOnInit(): void {
 		this.store.dispatch(fromCore.SetCurrentRouteStateAction({currentRoute: 'projects'}));
-		console.log(this.projects$);
 	}
 }

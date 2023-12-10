@@ -1,4 +1,5 @@
-<div class="lib-project-project-card-container">
+<div class="lib-project-project-card-container" 
+	(click)="this.navigateToProject(project.projectUrl)">
 	<header class="lib-project-project-card-image-wrapper">
 		<img [src]="project.projectImage"/>
 	</header>
