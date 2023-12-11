@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ApplicationState, ProjectCard } from '@personal-website/core';
-import { ProjectRootModule } from 'libraries/project/src/project.root.module';
+import { ProjectRootModule } from './../../../project.root.module';
 import { Store } from '@ngrx/store';
 import { NavigateToRouteAction } from 'libraries/core/src/stores/core';
 

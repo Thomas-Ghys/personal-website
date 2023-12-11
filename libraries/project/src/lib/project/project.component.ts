@@ -4,6 +4,7 @@ import { ProjectCardComponent } from "../components/project-card/project-card.co
 import { Store, select } from '@ngrx/store';
 import { ApplicationState, ProjectCard, fromCore, selectProjects } from '@personal-website/core';
 import { Observable } from 'rxjs';
+import { ProjectRootModule } from '../../project.root.module';
 
 @Component({
     selector: 'lib-project-project',
@@ -12,7 +13,8 @@ import { Observable } from 'rxjs';
     styleUrls: ['./project.component.scss'],
     imports: [
 		CommonModule, 
-		ProjectCardComponent
+		ProjectCardComponent,
+		ProjectRootModule
 	]
 })
 export class ProjectComponent implements OnInit {

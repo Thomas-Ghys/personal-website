@@ -19,6 +19,10 @@
 		}
 	},
 	"project": {
+		"overview": {
+			"title": "Projects",
+			"description": "An overview of all my publicly available projects. They provide a detailed explanation of technologies and coding practices used."
+		},
 		"project-card": {
 			"personal-website": {
 				"name": "Personal website",

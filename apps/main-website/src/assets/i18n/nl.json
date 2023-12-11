@@ -19,6 +19,10 @@
 		}
 	},
 	"project": {
+		"overview": {
+			"title": "Projecten",
+			"description": "Een overzicht van al mijn projecten die publiek beschikbaar zijn. Ze bevatten elks een uitgebreide omschrijving van de gebruikte technologieën en coding-standaarden."
+		},
 		"project-card": {
 			"personal-website": {
 				"name": "Persoonlijke website",
