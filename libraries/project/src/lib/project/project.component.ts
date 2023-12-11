@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ProjectCardComponent } from "../components/project-card/project-card.component";
 import { Store, select } from '@ngrx/store';
@@ -17,12 +17,10 @@ import { ProjectRootModule } from '../../project.root.module';
 		ProjectRootModule
 	]
 })
-export class ProjectComponent implements OnInit {
+export class ProjectComponent {
 	public projects$: Observable<ProjectCard[]> = this.store.pipe(select(selectProjects));
 
-	constructor(private store: Store<ApplicationState>) { }
-
-	ngOnInit(): void {
+	constructor(private store: Store<ApplicationState>) {
 		this.store.dispatch(fromCore.SetCurrentRouteStateAction({currentRoute: 'projects'}));
 	}
 }

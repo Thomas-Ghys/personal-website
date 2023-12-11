@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ApplicationState, fromCore } from '@personal-website/core';
 import { Store } from '@ngrx/store';
@@ -11,11 +11,9 @@ import { Store } from '@ngrx/store';
 	styleUrls: ['./home.component.scss'],
 	changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent {
 
-	constructor(private store: Store<ApplicationState>) {}
-
-	ngOnInit(): void {
+	constructor(private store: Store<ApplicationState>) {
 		this.store.dispatch(fromCore.SetCurrentRouteStateAction({currentRoute: 'home'}));
 	}
 }

@@ -38,8 +38,11 @@
 		line-height: var(--md-sys-typescale-label-large-line-height);
 		letter-spacing: var(--md-sys-typescale-label-large-letter-spacing);
 	
-		&:not(.side-nav-item-active):hover {
+		&:hover {
 			cursor: pointer;
+		}
+
+		&:not(.side-nav-item-active):hover {
 			background: var(--md-sys-color-surface-container);
 		}
 	

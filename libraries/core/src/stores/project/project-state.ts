@@ -13,7 +13,7 @@ export const INITIAL_PROJECT_STATE: ProjectState = {
 			projectDescription: [
 				'project.project-card.personal-website.description.0'
 			],
-			projectUrl: '/projects/personal-website'
+			projectUrl: 'projects/personal-website'
 		}
 	]
 }

@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Store } from '@ngrx/store';
 import { ApplicationState, fromCore } from '@personal-website/core';
@@ -11,10 +11,8 @@ import { ApplicationState, fromCore } from '@personal-website/core';
 	styleUrls: ['./about-me.component.scss'],
 	changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class AboutMeComponent implements OnInit {
-	constructor(private store: Store<ApplicationState>) {}
-
-	ngOnInit(): void {
-		this.store.dispatch(fromCore.SetCurrentRouteStateAction({currentRoute: 'about'}));
+export class AboutMeComponent {
+	constructor(private store: Store<ApplicationState>) {
+		this.store.dispatch(fromCore.SetCurrentRouteStateAction({currentRoute: 'about'}));		
 	}
 }

@@ -18,7 +18,7 @@ import { UiRootModule } from 'libraries/ui/src/ui.root.module';
 })
 export class HorizontalNavigationComponent {
 	protected horizontalNavigationItems$: Observable<NavigationItem[]> = this.store.pipe(select(selectNavigationItems));
-	protected sideNavItemActive: Observable<string> = this.store.pipe(select(selectCurrentRoute));
+	protected sideNavItemActive$: Observable<string> = this.store.pipe(select(selectCurrentRoute));
 	
 	constructor(private store: Store<ApplicationState>) { }
 
