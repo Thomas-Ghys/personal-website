@@ -2,7 +2,7 @@
 	<div class="side-nav-wrapper" 
 		*ngFor="let sideNavItem of (sideNavItemConfiguration$ | async)">
 		<div class="side-nav-item-container" 
-			[ngClass]="{'side-nav-item-active': (sideNavItemActive | async) === sideNavItem.sideNavUrl}">
+			[ngClass]="{'side-nav-item-active': (sideNavItem.sideNavUrl).startsWith((sideNavItemActive$ | async) ?? '')}">
 			<div class="side-nav-item-wrapper" (click)="navigateToRoute(sideNavItem.sideNavUrl)">
 				<mat-icon>{{sideNavItem.sideNavIcon}}</mat-icon>
 				<div>

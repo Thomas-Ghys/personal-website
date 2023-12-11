@@ -20,7 +20,7 @@ import { MatIconModule } from '@angular/material/icon';
 })
 export class SidenavPanelComponent {
 	protected sideNavItemConfiguration$: Observable<NavigationItem[]> = this.store.pipe(select(selectNavigationItems));
-	protected sideNavItemActive: Observable<string> = this.store.pipe(select(selectCurrentRoute));
+	protected sideNavItemActive$: Observable<string> = this.store.pipe(select(selectCurrentRoute));
 
 	constructor(private store: Store<ApplicationState>) { }
 
