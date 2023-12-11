@@ -1,0 +1,10 @@
+.project-feature-container {
+	width: calc(100% - (2 * 1em));
+	height: calc(100% - var(--header-height) - (2 * 1em));
+	background-color: var(--md-sys-color-surface-container-highest);
+	overflow-x: hidden;
+	overflow-y: auto;
+	border-radius: var(--md-sys-shape-corner-large);
+	margin: 1em;
+	box-shadow: 5px 5px 5px 0px rgba(var(--md-sys-color-shadow-rgb), 0.5);
+}

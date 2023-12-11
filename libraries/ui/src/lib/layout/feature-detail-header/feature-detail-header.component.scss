@@ -1,0 +1,19 @@
+.feature-detail-header-wrapper {
+	display: grid;
+	grid-template-columns: 1fr min-content;
+	grid-gap: 1em;
+	width: 100%;
+	box-sizing: border-box;
+	padding: 1em;
+
+	.feature-detail-close {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		.feature-detail-close-button {
+			background-color: var(--md-sys-color-surface-container-lowest);
+			color: var(--md-sys-color-on-surface)
+		}
+	}
+}

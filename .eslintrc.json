@@ -71,12 +71,11 @@
 		"space-unary-ops": "error", // enforce consistent spacing before or after unary operators
 		"switch-colon-spacing": "error", // enforce spacing around colons of switch statements
 		"template-curly-spacing": "error", // require or disallow spacing around embedded expressions of template strings
-		"wrap-regex": "error" // require parenthesis around regex literals,
+		"wrap-regex": "error", // require parenthesis around regex literals
       }
     },
     {
       "files": ["*.ts", "*.tsx"],
-      "extends": ["plugin:@nx/typescript"],
       "rules": {}
     },
     {

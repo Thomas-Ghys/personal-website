@@ -1,0 +1,12 @@
+<section class="feature-detail-header-wrapper">
+	<div class="feature-detail-header display-large">
+		{{ featureDetailHeaderText | translate }}
+	</div>
+	<div class="feature-detail-close">
+		<button mat-mini-fab 
+				class="feature-detail-close-button"
+				(click)="this.closeFeatureDetailClicked.emit()">
+			<mat-icon>close</mat-icon>
+		</button>
+	</div>
+</section>
